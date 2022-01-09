@@ -5,6 +5,7 @@ import "../css/mainPage.css";
 
 // import 이미지 변수명 from getImg(이미지 파일명);
 import tonyLogo from "../img/tonyLogo.png";
+import iconSearch from "../img/icon_search.png";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 function MainPage() {
@@ -12,11 +13,12 @@ function MainPage() {
         <>
             <div className="Wrap">
                 <header className="header">
-                    <div>
+                    <h1>
                         <img src={tonyLogo}></img>
-                    </div>
+                    </h1>
                     <div className="searchCon">
-                        <input type="text"></input>
+                        <input type="text" placeholder="10층 수분 돌파 비건 모찌 토너"></input>
+                        <img className="iconSearch" src={iconSearch}></img>
                     </div>
                     <div className="userCon">
                         <div className="userList">
