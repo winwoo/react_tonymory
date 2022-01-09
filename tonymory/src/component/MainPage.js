@@ -16,22 +16,29 @@ function MainPage() {
                         <img src={tonyLogo}></img>
                     </div>
                     <div className="searchCon">
-                        <input type={text}></input>
+                        <input type="text"></input>
                     </div>
                     <div className="userCon">
                         <div className="userList">
                             <span>로그인</span>
                             <span>회원가입</span>
                             <span>고객센터</span>
+
                         </div>
-                        <ul className="iconBox">
-                            <li>
-                                test
-                            </li>
-                        </ul>
+                        <div className="iconBox">
+                            <div>
+                                <span><img src=""></img></span>
+                                <span>마이페이지</span>
+                            </div>
+                            <div>
+                                <span><img src=""></img></span>
+                                <span>마이페이지</span>
+                            </div>
+                        </div>
                     </div>
                 </header>
             </div>
+
         </>
     );
 }
