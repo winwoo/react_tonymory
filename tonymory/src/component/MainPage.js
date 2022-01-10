@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../css/common.css";
 import "../css/mainPage.css";
+import { A } from "./util/common";
 
 
 // import 이미지 변수명 from getImg(이미지 파일명);
@@ -11,8 +12,12 @@ import iconShoppingBag from "../img/icon_shoppingbag.png";
 import iconProducts from "../img/icon_products.png";
 import iconNav from "../img/icon_nav.png";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 function MainPage() {
+
+    let [shoppingNum, setShoppingNum] = useState(0);
+
     return (
         <>
             <div className="Wrap">
@@ -20,37 +25,22 @@ function MainPage() {
                     {/*start::header*/}
                     <header className="header ">
                         <h1>
-                            <a href="#"><img src={tonyLogo}></img></a>
+                            <A content={<img src={tonyLogo} />} />
                         </h1>
                         <div className="searchCon">
-                            <input type="text" placeholder="10층 수분 돌파 비건 모찌 토너"></input>
-                            <img className="iconSearch" src={iconSearch}></img>
+                            <input type="text" placeholder="10층 수분 돌파 비건 모찌 토너" />
+                            <img className="iconSearch" src={iconSearch} />
                         </div>
                         <div className="userCon">
                             <div className="userList">
-                                <span><a href="#">로그인</a></span>
-                                <span><a href="#">회원가입</a></span>
-                                <span><a href="#">고객센터</a></span>
+                                <UserListElem text={"로그인"} />
+                                <UserListElem text={"회원가입"} />
+                                <UserListElem text={"고객센터"} />
                             </div>
                             <div className="iconBox">
-                                <div className="iconList">
-                                    <a href="#">
-                                        <span><img src={iconUser}></img></span>
-                                        <span className="txt">마이페이지</span>
-                                    </a>
-                                </div>
-                                <div className="iconList">
-                                    <a href="#">
-                                        <span><img src={iconShoppingBag}></img></span>
-                                        <span className="txt">쇼핑백 <span className="shoppingNum">0</span> </span>
-                                    </a>
-                                </div>
-                                <div className="iconList">
-                                    <a href="#">
-                                        <span><img src={iconProducts}></img></span>
-                                        <span className="txt">최근본상품</span>
-                                    </a>
-                                </div>
+                                <UserIconListElem img={iconUser} text={"마이페이지"} />
+                                <UserIconListElem img={iconShoppingBag} text={"쇼핑백"} shoppingNum={shoppingNum} />
+                                <UserIconListElem img={iconProducts} text={"최근본상품"} />
                             </div>
                         </div>
                     </header>
@@ -61,20 +51,20 @@ function MainPage() {
                     <div className="contentWrap">
                         <div className="navInner">
                             <div className="btnMenu">
-                                <a href="#">
-                                    <img src={iconNav}></img>
+                                <A content={<>
+                                    <img src={iconNav} />
                                     <span className="">전체 카테고리</span>
-                                </a>
+                                </>} />
                             </div>
                             <nav className="navList">
-                                <a href="#">베스트</a>
-                                <a href="#">신상</a>
-                                <a href="#">리뷰</a>
-                                <a href="#">커뮤니티</a>
-                                <a href="#">토니팁톡</a>
-                                <a href="#">쇼킹TV</a>
-                                <a href="#">기획전</a>
-                                <a href="#">이벤트</a>
+                                <A content={"베스트"} />
+                                <A content={"신상"} />
+                                <A content={"리뷰"} />
+                                <A content={"커뮤니티"} />
+                                <A content={"토니팁톡"} />
+                                <A content={"쇼킹TV"} />
+                                <A content={"기획전"} />
+                                <A content={"이벤트"} />
                             </nav>
                         </div>
                     </div>
@@ -83,6 +73,26 @@ function MainPage() {
             </div> {/*End::Wrap*/}
 
         </>
+    );
+}
+
+function UserListElem({ text }) {
+
+    return <span><A content={text} /></span>;
+}
+
+function UserIconListElem({ img, text, shoppingNum }) {
+    return (
+        <div className="iconList">
+            <A content={<>
+                <span><img src={img}></img></span>
+                {
+                    shoppingNum === undefined ?
+                        <span className="txt">{text}</span> :
+                        <span className="txt">{text}<span className="shoppingNum">{shoppingNum}</span> </span>
+                }
+            </>} />
+        </div>
     );
 }
 
