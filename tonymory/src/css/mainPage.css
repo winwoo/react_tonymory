@@ -1,7 +1,8 @@
 /* =============================== */
 /* ============layout============ */
 /* ============================== */
-.Wrap {max-width: 1270px; width: 100%; margin: 0 auto;}
+.Wrap {}
+.contentWrap {max-width: 1270px; width: 100%; margin: 0 auto;}
 
 
 
@@ -11,12 +12,37 @@
 /* ============header============ */
 /* ============================== */
 header {display: flex; justify-content: space-between; align-items: center; height: 106px;}
-header h1 {width: 221px;}
-header h1 img {display: block; width: inherit; height: inherit;}
+header h1 {}
+header h1 a {display: block; width: 221px;}
+header h1 a img {display: block; width: inherit; height: inherit;}
 
 header .searchCon {position: relative}
 header .searchCon input[type=text] {width: 470px; height: 55px; border: 4px solid #FE5342; border-radius: 40px; padding-left: 20px; box-sizing: border-box; outline: none;
-font-size: 14p;}
+font-size: 14px;}
 header .searchCon input::placeholder {font-size: 15px; color: #888;}
 header .searchCon input:focus::placeholder {visibility: hidden;}
 header .searchCon .iconSearch {position: absolute; top: 15px; right: 0; transform: translateX(-50%); width: 30px; height: 30px; cursor: pointer;}
+
+header .userCon .userList {margin-bottom: 20px; text-align: center;}
+header .userCon .userList span {display: inline-block; font-size: 12px; color: #757575; font-weight: bold;}
+header .userCon .userList span:after {content: "ㆍ"; padding: 0 5px; box-sizing: border-box;}
+header .userCon .userList span:last-child:after {display: none;}
+
+header .userCon .iconBox {display: flex; justify-content: space-between;}
+header .userCon .iconBox .iconList {margin-right: 15px; box-sizing: border-box;}
+header .userCon .iconBox .iconList:last-child {margin-right: 0;}
+header .userCon .iconBox .iconList a {display: flex; flex-direction: column; text-align: center;}
+header .userCon .iconBox .iconList a:hover .txt {text-decoration-line: underline; font-weight: bold;}
+header .userCon .iconBox .iconList a img {width: 20px; height: 20px;}
+header .userCon .iconBox .iconList a .txt {font-size: 12px; color: #222;}
+
+header .userCon .iconBox .shoppingNum {display: inline-block; width: 15px; background-color: #FE5342; color: #fff; border-radius: 50%;}
+
+.navContainer {height: 56px; border-top: 1px solid #eee; border-bottom: 1px solid #888;}
+.navContainer .navInner {display: flex; flex-direction: row; justify-content: flex-start; align-items: center; height: 56px; line-height: 56px; font-size: 15px;}
+.navContainer .btnMenu {display: flex; height: inherit; padding: 0 31px; border-left: 1px solid #E8ECF2; border-right: 1px solid #E8ECF2; box-sizing: border-box;;}
+.navContainer .btnMenu a {display: block;}
+.navContainer .btnMenu img {display: inline-block; width: 20px; height: 20px;}
+.navContainer .btnMenu span {vertical-align: 3px; margin-left: 10px;}
+.navContainer .navList {height: inherit;}
+.navContainer .navList a {display: inline-block; height: inherit; padding: 0 31px;}
