@@ -82,7 +82,7 @@ function UserListElem({ text }) {
 }
 
 function UserIconListElem({ img, text, shoppingNum }) {
-    return (
+    return ( 
         <div className="iconList">
             <A content={<>
                 <span><img src={img}></img></span>
