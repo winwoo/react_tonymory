@@ -1,6 +1,6 @@
-/* =============================== */
-/* ============layout============ */
-/* ============================== */
+/* =========================================== */
+/* layout */
+/* =========================================== */
 .Wrap {}
 .contentWrap {max-width: 1270px; width: 100%; margin: 0 auto;}
 
@@ -8,9 +8,16 @@
 
 
 
-/* =============================== */
-/* ============header============ */
-/* ============================== */
+.cl_headLineName {font-weight: bold; font-size: 30px; word-spacing: unset; color: #222; margin-bottom: 30px;}
+
+
+
+
+
+
+/* =========================================== */
+/* header */
+/* =========================================== */
 header {display: flex; justify-content: space-between; align-items: center; height: 106px;}
 header h1 {}
 header h1 a {display: block; width: 221px;}
@@ -33,16 +40,73 @@ header .userCon .iconBox .iconList {margin-right: 15px; box-sizing: border-box;}
 header .userCon .iconBox .iconList:last-child {margin-right: 0;}
 header .userCon .iconBox .iconList a {display: flex; flex-direction: column; text-align: center;}
 header .userCon .iconBox .iconList a:hover .txt {text-decoration-line: underline; font-weight: bold;}
-header .userCon .iconBox .iconList a img {width: 20px; height: 20px;}
+header .userCon .iconBox .iconList a img {margin-bottom: 7px; width: 20px; height: 20px;}
 header .userCon .iconBox .iconList a .txt {font-size: 12px; color: #222;}
 
 header .userCon .iconBox .shoppingNum {display: inline-block; width: 15px; background-color: #FE5342; color: #fff; border-radius: 50%;}
 
 .navContainer {height: 56px; border-top: 1px solid #eee; border-bottom: 1px solid #888;}
 .navContainer .navInner {display: flex; flex-direction: row; justify-content: flex-start; align-items: center; height: 56px; line-height: 56px; font-size: 15px;}
-.navContainer .btnMenu {display: flex; height: inherit; padding: 0 31px; border-left: 1px solid #E8ECF2; border-right: 1px solid #E8ECF2; box-sizing: border-box;;}
-.navContainer .btnMenu a {display: block;}
+.navContainer .btnMenu {display: flex; height: inherit; border-left: 1px solid #E8ECF2; border-right: 1px solid #E8ECF2; }
+.navContainer .btnMenu a {display: block; padding: 0 31px;}
 .navContainer .btnMenu img {display: inline-block; width: 20px; height: 20px;}
-.navContainer .btnMenu span {vertical-align: 3px; margin-left: 10px;}
+.navContainer .btnMenu span {margin-left: 10px;}
 .navContainer .navList {height: inherit;}
 .navContainer .navList a {display: inline-block; height: inherit; padding: 0 31px;}
+
+
+/* =========================================== */
+/* mainVisual */
+/* =========================================== */
+.mainVisualSlide {font-size: 15px; color: #222; text-align: center; margin-bottom: 91px;}
+.mainVisualSlide .mainImgContainer {position: relative; display: flex; justify-content: center;}
+.mainVisualSlide .mainImgContainer img {}
+.mainVisualSlide .mainImgContainer:after {position: absolute; left: 0; bottom: 0; content: ''; display: block; width: 100%; height: 1px; background-color: #E3E7ED;}
+.mainVisualSlide .slideNavBar {position: relative; display: flex; justify-content: center; height: 51px; line-height: 51px;}
+.mainVisualSlide .slideNavBar a {display: block; width: 116px; height: inherit; border-left: 1px solid #E3E7ED; border-bottom: 1px solid #E3E7ED; box-sizing: border-box;}
+.mainVisualSlide .slideNavBar a:hover {background-color: #000; color: #fff;}
+.mainVisualSlide .sliderBtnBox {position: relative; right: 0; width: 50px; height: inherit; border-bottom: 1px solid #E3E7ED; background-color: #FE5342;}
+
+/* =========================================== */
+/* 눈이 가는 핫#키워드 */
+/* =========================================== */
+.mainSection {margin-bottom: 91px;}
+.mainSection .keyWordList {display: flex; flex-direction: row; justify-content: space-between;}
+.mainSection .keyWordList li {margin-right: 20px; text-align: center;}
+.mainSection .keyWordList li:last-child {margin-right: 0;}
+.mainSection .keyWordList a {display: block;}
+.mainSection .keyWordList a:hover .keyWordSubName {text-decoration: underline; color: #FB5443;}
+.mainSection .keyWordList .keyWordImg {display: flex; flex-direction: column; width: 103px; height: 103px; margin-bottom: 24px;}
+
+.mainSection .keyWordList .keyWordImg img {display: block; width: inherit; height: inherit; border-radius: 100%; background-color: #f8f8f8;}
+
+
+/* =========================================== */
+/* 추천상품 */
+/* =========================================== */
+.products {}
+.products .productsContainer {display: flex;}
+.products .productsContainer .productsList {position: relative;}
+.products .productsContainer .productsList:hover .dimmedCon {background-color: #fff; opacity: 0.5;}
+.products .productsContainer .productsList div {margin-bottom: 10px;}
+.products .productsContainer .productsList img {box-sizing: border-box; border: 1px solid #eee;}
+.products .productsContainer .productsList .benefits {font-size: 15px; color: #fc5443;letter-spacing: -0.18px;}
+.products .productsContainer .productsList .tonymoly {color: #111; }
+.products .productsContainer .productsList .productsName {font-size: 17px;}
+.products .productsContainer .productsList .productsPrice {}
+.products .productsContainer .productsList .productsPrice .discount {}
+.products .productsContainer .productsList .productsPrice .discount::after {content: '원'; display: inline;}
+.products .productsContainer .productsList .productsPrice .price {}
+
+.products .productsContainer .productsList .flagBox {}
+.products .productsContainer .productsList .flagBox .flag {}
+
+.products .productsContainer .productsList .grade {}
+.products .productsContainer .productsList .grade .score {}
+.products .productsContainer .productsList .grade .review {}
+
+.products .productsContainer .productsList .dimmerBg {position: absolute; top:0; left: 50%; width: 100%; height: 100%; transform: translateX(-50%); }
+.products .productsContainer .productsList .dimmerBg .dimmedCon {display: flex; justify-content: center; align-items: center; height: inherit;  transition: .5s;}
+.products .productsContainer .productsList .dimmerBg .dimmedCon a {display: block; width: 60px; height: 60px; border-radius: 100%; text-align: center;}
+.products .productsContainer .productsList .dimmerBg .dimmedCon a .circle {}
+.products .productsContainer .productsList .dimmerBg .dimmedCon a .circle img {}
