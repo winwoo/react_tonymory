@@ -46,7 +46,9 @@ function MainPage() {
                     {/*start::header*/}
                     <header className="header ">
                         <h1>
-                            <A content={<img src={tonyLogo} />} />
+                            <A>
+                                <img src={tonyLogo} />
+                            </A>
                         </h1>
                         <div className="searchCon">
                             <input type="text" placeholder="10층 수분 돌파 비건 모찌 토너" />
