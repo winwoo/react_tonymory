@@ -75,20 +75,19 @@ function MainPage() {
                     <div className="contentWrap">
                         <div className="navInner">
                             <div className="btnMenu">
-                                <A content={<>
+                                <A>
                                     <img src={iconNav} />
                                     <span className="">전체 카테고리</span>
-                                </>} />
+                                </A>
                             </div>
                             <nav className="navList">
-                                <A content={"베스트"} />
-                                <A content={"신상"} />
-                                <A content={"리뷰"} />
-                                <A content={"커뮤니티"} />
-                                <A content={"토니팁톡"} />
-                                <A content={"쇼킹TV"} />
-                                <A content={"기획전"} />
-                                <A content={"이벤트"} />
+                                <A>베스트</A>
+                                <A>신상</A>
+                                <A>커뮤니티</A>
+                                <A>토니팁톡</A>
+                                <A>소킹TV</A>
+                                <A>기획전</A>
+                                <A>이벤트</A>
                             </nav>
                         </div>
                     </div>
@@ -97,17 +96,16 @@ function MainPage() {
                 <div className="mainVisualSlide">
                     <div className="mainImgContainer"><img src={mainVisualImg00}></img></div>
                     <div className="slideNavBar contentWrap">
-                        <A content={"빅세일"} />
-                        <A content={"토니랩1+1"} />
-                        <A content={"당첨자 발표"} />
-                        <A content={"리뷰이벤트"} />
-                        <A content={"토니팁톡"} />
-                        <A content={"1월 혜택"} />
-                        <A content={"T스튜디오"} />
-                        <A content={"뷰티테스터"} />
-                        <A content={"이달의신상"} />
-                        <A content={"비건라이너"} />
-
+                        <A>빅세일</A>
+                        <A>토니랩1+1</A>
+                        <A>당첨자 발표</A>
+                        <A>리뷰이벤트</A>
+                        <A>토니팁톡</A>
+                        <A>1월 혜택</A>
+                        <A>T스튜디오</A>
+                        <A>뷰티테스터</A>
+                        <A>이달의신상</A>
+                        <A>비건라이너</A>
                         <div className="sliderBtnBox">
                             test
                         </div>
@@ -119,84 +117,84 @@ function MainPage() {
                         <p className="cl_headLineName">눈이 가는 핫#키워드</p>
                         <ul className="keyWordList">
                             <li>
-                                <A content={
+                                <A>
                                     <>
                                         <span className="keyWordImg"><img src={keywordIcon00} /></span>
                                         <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
-                                } />
+                                </A>
                             </li>
                             <li>
-                                <A content={
+                                <A>
                                     <>
                                         <span className="keyWordImg"><img src={keywordIcon01} /></span>
-                                        <span className="keyWordSubName">#비건</span>
+                                        <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
-                                } />
+                                </A>
                             </li>
                             <li>
-                                <A content={
+                                <A>
                                     <>
                                         <span className="keyWordImg"><img src={keywordIcon02} /></span>
-                                        <span className="keyWordSubName">#오하착</span>
+                                        <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
-                                } />
+                                </A>
                             </li>
                             <li>
-                                <A content={
+                                <A>
                                     <>
                                         <span className="keyWordImg"><img src={keywordIcon03} /></span>
-                                        <span className="keyWordSubName">#모찌라인</span>
+                                        <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
-                                } />
+                                </A>
                             </li>
                             <li>
-                                <A content={
+                                <A>
                                     <>
                                         <span className="keyWordImg"><img src={keywordIcon04} /></span>
-                                        <span className="keyWordSubName">#팩&패드</span>
+                                        <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
-                                } />
+                                </A>
                             </li>
                             <li>
-                                <A content={
+                                <A>
                                     <>
                                         <span className="keyWordImg"><img src={keywordIcon05} /></span>
-                                        <span className="keyWordSubName">#기미야</span>
+                                        <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
-                                } />
+                                </A>
                             </li>
                             <li>
-                                <A content={
+                                <A>
                                     <>
                                         <span className="keyWordImg"><img src={keywordIcon06} /></span>
-                                        <span className="keyWordSubName">#SUN</span>
+                                        <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
-                                } />
+                                </A>
                             </li>
                             <li>
-                                <A content={
+                                <A>
                                     <>
                                         <span className="keyWordImg"><img src={keywordIcon07} /></span>
-                                        <span className="keyWordSubName">#보습</span>
+                                        <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
-                                } />
+                                </A>
                             </li>
                             <li>
-                                <A content={
+                                <A>
                                     <>
                                         <span className="keyWordImg"><img src={keywordIcon08} /></span>
-                                        <span className="keyWordSubName">#콜라겐</span>
+                                        <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
-                                } />
+                                </A>
                             </li>
                             <li>
-                                <A content={
+                                <A>
                                     <>
                                         <span className="keyWordImg"><img src={keywordIcon09} /></span>
-                                        <span className="keyWordSubName">#슈퍼인텐스</span>
+                                        <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
-                                } />
+                                </A>
                             </li>
                         </ul>
                     </section>
@@ -217,21 +215,21 @@ function MainPage() {
                                 </div>
                                 <div className="dimmerBg">
                                     <div className="dimmedCon">
-                                        <A content={
+                                        <A>
                                             <>
                                                 <span className="circle"> <FontAwesomeIcon icon={faShoppingBag} size="2x" /></span>
                                             </>
-                                        } />
-                                        <A content={
+                                        </A>
+                                        <A>
                                             <>
                                                 <span className="circle"><FontAwesomeIcon icon={faHeart} size="2x" /></span>
                                             </>
-                                        } />
-                                        <A content={
+                                        </A>
+                                        <A>
                                             <>
                                                 <span className="circle"><FontAwesomeIcon icon={faCreditCard} size="2x" /></span>
                                             </>
-                                        } />
+                                        </A>
                                     </div>
                                 </div>
                             </li>
@@ -248,20 +246,20 @@ function MainPage() {
 
 function UserListElem({ text }) {
 
-    return <span><A content={text} /></span>;
+    return <span><A>{text}</A></span>;
 }
 
 function UserIconListElem({ img, text, shoppingNum }) {
-    return ( 
+    return (
         <div className="iconList">
-            <A content={<>
+            <A>
                 <span><img src={img}></img></span>
                 {
                     shoppingNum === undefined ?
                         <span className="txt">{text}</span> :
                         <span className="txt">{text}<span className="shoppingNum">{shoppingNum}</span> </span>
                 }
-            </>} />
+            </A>
         </div>
     );
 }
