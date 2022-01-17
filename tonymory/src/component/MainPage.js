@@ -2,38 +2,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../css/common.css";
 import "../css/mainPage.css";
 import { A } from "./util/common";
+import ImgLoader from "./ImgLoader";
 
-
-// import 이미지 변수명 from getImg(이미지 파일명);
-import tonyLogo from "../img/tonyLogo.png";
-import iconSearch from "../img/icon_search.png";
-import iconUser from "../img/icon_user.png";
-import iconShoppingBag from "../img/icon_shoppingbag.png";
-import iconProducts from "../img/icon_products.png";
-import iconNav from "../img/icon_nav.png";
-//mainVisual 이미지
-import mainVisualImg00 from "../img/event0518.jpg";
-//눈이가는 핫키워드 이미지
-import keywordIcon00 from "../img/keyword00.png";
-import keywordIcon01 from "../img/keyword01.png";
-import keywordIcon02 from "../img/keyword02.png";
-import keywordIcon03 from "../img/keyword03.png";
-import keywordIcon04 from "../img/keyword04.png";
-import keywordIcon05 from "../img/keyword05.png";
-import keywordIcon06 from "../img/keyword06.png";
-import keywordIcon07 from "../img/keyword07.jpg";
-import keywordIcon08 from "../img/keyword08.jpg";
-import keywordIcon09 from "../img/keyword09.jpg";
 //추천상품 이미지
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
 
-import heart_icon from "../img/heart_icon.png";
-import credit_icon from "../img/credit_icon.png";
-import products00 from "../img/products00.jpg";
-
 import { useState } from "react";
+
 
 function MainPage() {
 
@@ -47,12 +24,12 @@ function MainPage() {
                     <header className="header ">
                         <h1>
                             <A>
-                                <img src={tonyLogo} />
+                                <img src={ImgLoader.tonyLogo} />
                             </A>
                         </h1>
                         <div className="searchCon">
                             <input type="text" placeholder="10층 수분 돌파 비건 모찌 토너" />
-                            <img className="iconSearch" src={iconSearch} />
+                            <img className="iconSearch" src={ImgLoader.iconSearch} />
                         </div>
                         <div className="userCon">
                             <div className="userList">
@@ -61,9 +38,9 @@ function MainPage() {
                                 <UserListElem text={"고객센터"} />
                             </div>
                             <div className="iconBox">
-                                <UserIconListElem img={iconUser} text={"마이페이지"} />
-                                <UserIconListElem img={iconShoppingBag} text={"쇼핑백"} shoppingNum={shoppingNum} />
-                                <UserIconListElem img={iconProducts} text={"최근본상품"} />
+                                <UserIconListElem img={ImgLoader.iconUser} text={"마이페이지"} />
+                                <UserIconListElem img={ImgLoader.iconShoppingBag} text={"쇼핑백"} shoppingNum={shoppingNum} />
+                                <UserIconListElem img={ImgLoader.iconProducts} text={"최근본상품"} />
                             </div>
                         </div>
                     </header>
@@ -76,7 +53,7 @@ function MainPage() {
                         <div className="navInner">
                             <div className="btnMenu">
                                 <A>
-                                    <img src={iconNav} />
+                                    <img src={ImgLoader.iconNav} />
                                     <span className="">전체 카테고리</span>
                                 </A>
                             </div>
@@ -94,7 +71,7 @@ function MainPage() {
                 </div>
 
                 <div className="mainVisualSlide">
-                    <div className="mainImgContainer"><img src={mainVisualImg00}></img></div>
+                    <div className="mainImgContainer"><img src={ImgLoader.mainVisualImg00}></img></div>
                     <div className="slideNavBar contentWrap">
                         <A>빅세일</A>
                         <A>토니랩1+1</A>
@@ -119,7 +96,7 @@ function MainPage() {
                             <li>
                                 <A>
                                     <>
-                                        <span className="keyWordImg"><img src={keywordIcon00} /></span>
+                                        <span className="keyWordImg"><img src={ImgLoader.keywordIcon00} /></span>
                                         <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
                                 </A>
@@ -127,7 +104,7 @@ function MainPage() {
                             <li>
                                 <A>
                                     <>
-                                        <span className="keyWordImg"><img src={keywordIcon01} /></span>
+                                        <span className="keyWordImg"><img src={ImgLoader.keywordIcon01} /></span>
                                         <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
                                 </A>
@@ -135,7 +112,7 @@ function MainPage() {
                             <li>
                                 <A>
                                     <>
-                                        <span className="keyWordImg"><img src={keywordIcon02} /></span>
+                                        <span className="keyWordImg"><img src={ImgLoader.keywordIcon02} /></span>
                                         <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
                                 </A>
@@ -143,7 +120,7 @@ function MainPage() {
                             <li>
                                 <A>
                                     <>
-                                        <span className="keyWordImg"><img src={keywordIcon03} /></span>
+                                        <span className="keyWordImg"><img src={ImgLoader.keywordIcon03} /></span>
                                         <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
                                 </A>
@@ -151,7 +128,7 @@ function MainPage() {
                             <li>
                                 <A>
                                     <>
-                                        <span className="keyWordImg"><img src={keywordIcon04} /></span>
+                                        <span className="keyWordImg"><img src={ImgLoader.keywordIcon04} /></span>
                                         <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
                                 </A>
@@ -159,7 +136,7 @@ function MainPage() {
                             <li>
                                 <A>
                                     <>
-                                        <span className="keyWordImg"><img src={keywordIcon05} /></span>
+                                        <span className="keyWordImg"><img src={ImgLoader.keywordIcon05} /></span>
                                         <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
                                 </A>
@@ -167,7 +144,7 @@ function MainPage() {
                             <li>
                                 <A>
                                     <>
-                                        <span className="keyWordImg"><img src={keywordIcon06} /></span>
+                                        <span className="keyWordImg"><img src={ImgLoader.keywordIcon06} /></span>
                                         <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
                                 </A>
@@ -175,7 +152,7 @@ function MainPage() {
                             <li>
                                 <A>
                                     <>
-                                        <span className="keyWordImg"><img src={keywordIcon07} /></span>
+                                        <span className="keyWordImg"><img src={ImgLoader.keywordIcon07} /></span>
                                         <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
                                 </A>
@@ -183,7 +160,7 @@ function MainPage() {
                             <li>
                                 <A>
                                     <>
-                                        <span className="keyWordImg"><img src={keywordIcon08} /></span>
+                                        <span className="keyWordImg"><img src={ImgLoader.keywordIcon08} /></span>
                                         <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
                                 </A>
@@ -191,7 +168,7 @@ function MainPage() {
                             <li>
                                 <A>
                                     <>
-                                        <span className="keyWordImg"><img src={keywordIcon09} /></span>
+                                        <span className="keyWordImg"><img src={ImgLoader.keywordIcon09} /></span>
                                         <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
                                 </A>
@@ -203,7 +180,7 @@ function MainPage() {
                         <p className="cl_headLineName">추천상품</p>
                         <ul className="productsContainer">
                             <li className="productsList">
-                                <img src={products00} />
+                                <img src={ImgLoader.products00} />
                                 <div className="benefits">1.13~1.17 쿠폰 적용시 9,900원</div>
                                 <div className="tonymoly">TONYMOLY</div>
                                 <div className="productsName">프롬 강화 맑은 약쑥 안정 수분크림</div>
