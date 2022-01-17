@@ -86,13 +86,15 @@ header .userCon .iconBox .shoppingNum {display: inline-block; width: 15px; backg
 /* =========================================== */
 .products {}
 .products .productsContainer {display: flex;}
-.products .productsContainer .productsList {position: relative;}
-.products .productsContainer .productsList:hover .dimmedCon {background-color: #fff; opacity: 0.5;}
+.products .productsContainer .productsList {position: relative; cursor: pointer;}
+
+.products .productsContainer .productsList:hover .productsName {text-decoration: underline; font-weight: bold;}
+/* .products .productsContainer .productsList:hover .dimmedCon {background-color: #fff; opacity: 0.5;} */
 .products .productsContainer .productsList div {margin-bottom: 10px;}
 .products .productsContainer .productsList img {box-sizing: border-box; border: 1px solid #eee;}
 .products .productsContainer .productsList .benefits {font-size: 15px; color: #fc5443;letter-spacing: -0.18px;}
 .products .productsContainer .productsList .tonymoly {color: #111; }
-.products .productsContainer .productsList .productsName {font-size: 17px;}
+.products .productsContainer .productsList .productsName {display: inline-block; font-size: 17px;}
 .products .productsContainer .productsList .productsPrice {}
 .products .productsContainer .productsList .productsPrice .discount {}
 .products .productsContainer .productsList .productsPrice .discount::after {content: '원'; display: inline;}
@@ -105,8 +107,8 @@ header .userCon .iconBox .shoppingNum {display: inline-block; width: 15px; backg
 .products .productsContainer .productsList .grade .score {}
 .products .productsContainer .productsList .grade .review {}
 
-.products .productsContainer .productsList .dimmerBg {position: absolute; top:0; left: 50%; width: 100%; height: 100%; transform: translateX(-50%); }
+/* .products .productsContainer .productsList .dimmerBg {position: absolute; top:0; left: 50%; width: 100%; height: 100%; transform: translateX(-50%); }
 .products .productsContainer .productsList .dimmerBg .dimmedCon {display: flex; justify-content: center; align-items: center; height: inherit;  transition: .5s;}
 .products .productsContainer .productsList .dimmerBg .dimmedCon a {display: block; width: 60px; height: 60px; border-radius: 100%; text-align: center;}
 .products .productsContainer .productsList .dimmerBg .dimmedCon a .circle {}
-.products .productsContainer .productsList .dimmerBg .dimmedCon a .circle img {}
+.products .productsContainer .productsList .dimmerBg .dimmedCon a .circle img {} */
