@@ -6,7 +6,7 @@ import ImgLoader from "./ImgLoader";
 
 //추천상품 이미지
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
 
 import { useState } from "react";
@@ -181,15 +181,6 @@ function MainPage() {
                         <ul className="productsContainer">
                             <li className="productsList">
                                 <img src={ImgLoader.products00} />
-                                <div className="benefits">1.13~1.17 쿠폰 적용시 9,900원</div>
-                                <div className="tonymoly">TONYMOLY</div>
-                                <div className="productsName">프롬 강화 맑은 약쑥 안정 수분크림</div>
-                                <div className="productsPrice"><span className="discount">165,000</span><span className="price">38,000</span>원</div>
-                                <div className="flagBox"><span className="flag">무배</span></div>
-                                <div className="grade">
-                                    <span className="score">★ 4.8</span>
-                                    <span className="review">리뷰 59</span>
-                                </div>
                                 <div className="dimmerBg">
                                     <div className="dimmedCon">
                                         <A>
@@ -208,6 +199,130 @@ function MainPage() {
                                             </>
                                         </A>
                                     </div>
+                                </div>
+                                <div className="benefits">1.13~1.17 쿠폰 적용시 9,900원</div>
+                                <div className="tonymoly">TONYMOLY</div>
+                                <div className="productsName">프롬 강화 맑은 약쑥 안정 수분크림</div>
+                                <div className="productsPrice">
+                                    <span className="percent">20%</span>
+                                    <span className="price discount">165,000</span>
+                                    <span className="price basicPrice">38,000</span>
+                                </div>
+                                <div className="flagBox"><span className="flag">무배</span></div>
+                                <div className="grade">
+                                    <span className="score">★ 4.8</span>
+                                    <span className="review">리뷰 59</span>
+                                </div>
+                            </li>
+                            <li className="productsList">
+                                <img src={ImgLoader.products00} />
+                                <div className="dimmerBg">
+                                    <div className="dimmedCon">
+                                        <A>
+                                            <>
+                                                <span className="circle"> <FontAwesomeIcon icon={faShoppingBag} size="2x" /></span>
+                                            </>
+                                        </A>
+                                        <A>
+                                            <>
+                                                <span className="circle"><FontAwesomeIcon icon={faHeart} size="2x" /></span>
+                                            </>
+                                        </A>
+                                        <A>
+                                            <>
+                                                <span className="circle"><FontAwesomeIcon icon={faCreditCard} size="2x" /></span>
+                                            </>
+                                        </A>
+                                    </div>
+                                </div>
+                                <div className="benefits">1.13~1.17 쿠폰 적용시 9,900원</div>
+                                <div className="tonymoly">TONYMOLY</div>
+                                <div className="productsName">프롬 강화 맑은 약쑥 안정 수분크림</div>
+                                <div className="productsPrice">
+                                    <span className="percent">20%</span>
+                                    <span className="price discount">165,000</span>
+                                    <span className="price basicPrice">38,000</span>
+                                </div>
+                                <div className="flagBox">
+                                    <span className="flag">ONLY 온라인</span>
+                                    <span className="flag">무배</span>
+                                </div>
+                                <div className="grade">
+                                    <span className="score">★ 4.8</span>
+                                    <span className="review">리뷰 59</span>
+                                </div>
+                            </li>
+                            <li className="productsList">
+                                <img src={ImgLoader.products00} />
+                                <div className="dimmerBg">
+                                    <div className="dimmedCon">
+                                        <A>
+                                            <>
+                                                <span className="circle"> <FontAwesomeIcon icon={faShoppingBag} size="2x" /></span>
+                                            </>
+                                        </A>
+                                        <A>
+                                            <>
+                                                <span className="circle"><FontAwesomeIcon icon={faHeart} size="2x" /></span>
+                                            </>
+                                        </A>
+                                        <A>
+                                            <>
+                                                <span className="circle"><FontAwesomeIcon icon={faCreditCard} size="2x" /></span>
+                                            </>
+                                        </A>
+                                    </div>
+                                </div>
+                                <div className="benefits">1.13~1.17 쿠폰 적용시 9,900원</div>
+                                <div className="tonymoly">TONYMOLY</div>
+                                <div className="productsName">프롬 강화 맑은 약쑥 안정 수분크림</div>
+                                <div className="productsPrice">
+                                    <span className="percent">20%</span>
+                                    <span className="price discount">165,000</span>
+                                    <span className="price basicPrice">38,000</span>
+                                </div>
+                                <div className="flagBox"><span className="flag">무배</span></div>
+                                <div className="grade">
+                                    <span className="score">★ 4.8</span>
+                                    <span className="review">리뷰 59</span>
+                                </div>
+                            </li>
+                            <li className="productsList">
+                                <img src={ImgLoader.products00} />
+                                <div className="dimmerBg">
+                                    <div className="dimmedCon">
+                                        <A>
+                                            <>
+                                                <span className="circle"> <FontAwesomeIcon icon={faShoppingBag} size="2x" /></span>
+                                            </>
+                                        </A>
+                                        <A>
+                                            <>
+                                                <span className="circle"><FontAwesomeIcon icon={faHeart} size="2x" /></span>
+                                            </>
+                                        </A>
+                                        <A>
+                                            <>
+                                                <span className="circle"><FontAwesomeIcon icon={faCreditCard} size="2x" /></span>
+                                            </>
+                                        </A>
+                                    </div>
+                                </div>
+                                <div className="benefits">1.13~1.17 쿠폰 적용시 9,900원</div>
+                                <div className="tonymoly">TONYMOLY</div>
+                                <div className="productsName">프롬 강화 맑은 약쑥 안정 수분크림</div>
+                                <div className="productsPrice">
+                                    <span className="percent">20%</span>
+                                    <span className="price discount">165,000</span>
+                                    <span className="price basicPrice">38,000</span>
+                                </div>
+                                <div className="flagBox">
+                                    <span className="flag">무배</span>
+                                    <span className="flag">NEW</span>
+                                </div>
+                                <div className="grade">
+                                    <span className="score">★ 4.8</span>
+                                    <span className="review">리뷰 59</span>
                                 </div>
                             </li>
                         </ul>
