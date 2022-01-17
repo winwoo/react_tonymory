@@ -93,7 +93,7 @@ function MainPage() {
                     <section className="mainSection">
                         <p className="cl_headLineName">눈이 가는 핫#키워드</p>
                         <ul className="keyWordList">
-                            <li>
+                            {/* <li>
                                 <A>
                                     <>
                                         <span className="keyWordImg"><img src={ImgLoader.keywordIcon00} /></span>
@@ -172,7 +172,7 @@ function MainPage() {
                                         <span className="keyWordSubName">#더쇼킹배송</span>
                                     </>
                                 </A>
-                            </li>
+                            </li> */}
                         </ul>
                     </section>
 
