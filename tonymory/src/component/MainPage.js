@@ -229,10 +229,14 @@ function RecommandProductElem() {
                     <span className="price discount">{data.price.toLocaleString()}</span>
                     <span className="price basicPrice">{discountPrice.toLocaleString()}</span>
                 </div>
-                <div className="flagBox">
-                    {data.isOnlyOnline && <span className="flag">ONLY 온라인</span>}
-                    {data.isFreeDelivery && <span className="flag">무배</span>}
-                </div>
+                { 
+                    data.isOnlyOnline || data.isFreeDelivery ?
+                        <div className="flagBox">
+                            {data.isOnlyOnline && <span className="flag">ONLY 온라인</span>}
+                            {data.isFreeDelivery && <span className="flag">무배</span>}
+                        </div> :
+                        null
+                }
                 <div className="grade">
                     <span className="score">★ {data.reviewScore}</span>
                     <span className="review">리뷰 {data.reviewCount}</span>

@@ -66,6 +66,14 @@ export const KeywordData = [
         img: "keyword05.png",
         text: "#더쇼킹배송"
     },
+    {
+        img: "keyword06.png",
+        text: "#더쇼킹배송"
+    },
+    {
+        img: "keyword07.jpg",
+        text: "#더쇼킹배송"
+    },
 ];
 
 export const RecommandProductData = [
@@ -77,8 +85,8 @@ export const RecommandProductData = [
         productName: "프롬 강화 맑은 약쑥 안정 수분크림1",
         price: 165000,
         discountRate: 0.2,
-        isFreeDelivery: true,
-        isOnlyOnline: true,
+        isFreeDelivery: false,
+        isOnlyOnline: false,
         reviewScore: 4.8,
         reviewCount: 59
     },
