@@ -1,3 +1,36 @@
+export const MainVisualData = [
+    {
+        img: "event0509.jpg"
+    },
+    {
+        img: "event0510.jpg"
+    },
+    {
+        img: "event0511.jpg"
+    },
+    {
+        img: "event0512.jpg"
+    },
+    {
+        img: "event0513.jpg"
+    },
+    {
+        img: "event0514.jpg"
+    },
+    {
+        img: "event0515.jpg"
+    },
+    {
+        img: "event0516.jpg"
+    },
+    {
+        img: "event0517.jpg"
+    },
+    {
+        img: "event0518.jpg"
+    }
+];
+
 export const KeywordData = [
     {
         img: "keyword00.png",

@@ -4,19 +4,30 @@ import "../css/mainPage.css";
 import { A } from "./util/Common";
 import CommonImg, { ImgLoad } from "./ImgLoader";
 
+// slider
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 //추천상품 이미지
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-import { KeywordData, RecommandProductData } from "../data/data";
+import { KeywordData, MainVisualData, RecommandProductData } from "../data/data";
 
 
 function MainPage() {
 
     let [shoppingNum, setShoppingNum] = useState(0);
+    let [isAutoSlide, setisAutoSlide] = useState(true);
+    let sliderRef = useRef(null);
+
+    useEffect(() => {
+        isAutoSlide ? sliderRef.current.slickPlay() : sliderRef.current.slickPause();
+    }, [isAutoSlide])
 
     return (
         <div className="Wrap">
@@ -70,7 +81,7 @@ function MainPage() {
             </div>
 
             <div className="mainVisualSlide">
-                <div className="mainImgContainer"><img src={CommonImg.mainVisualImg00}></img></div>
+                <MainVisualSlide sliderRef={sliderRef} isAutoSlide={isAutoSlide} />
                 <div className="slideNavBar contentWrap">
                     <A>빅세일</A>
                     <A>토니랩1+1</A>
@@ -82,8 +93,10 @@ function MainPage() {
                     <A>뷰티테스터</A>
                     <A>이달의신상</A>
                     <A>비건라이너</A>
-                    <div className="sliderBtnBox">
-                        test
+                    <div className="sliderBtnBox" onClick={() => {
+                        setisAutoSlide(!isAutoSlide);
+                    }}>
+                        {isAutoSlide ? "Auto" : "Stop"}
                     </div>
                 </div>
             </div>{/*End::mainVisual*/}
@@ -105,7 +118,41 @@ function MainPage() {
 
             </div>
 
-        {/*End::Wrap*/}
+            {/*End::Wrap*/}
+        </div>
+    );
+}
+
+function MainVisualSlide({ sliderRef }) {
+    function MainVisual({ data }) {
+        return (
+            <div className="mainImgContainer">
+                <img src={ImgLoad(data.img)} />
+            </div>
+        );
+    }
+
+    const mainVisualArr = [];
+    for (let i = 0; i < MainVisualData.length; ++i) {
+        const data = MainVisualData[i];
+        mainVisualArr.push(<MainVisual key={i} data={data} />);
+    }
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: false,
+    };
+    return (
+        <div>
+            <Slider ref={sliderRef} {...settings}>
+                {mainVisualArr}
+            </Slider>
         </div>
     );
 }
@@ -154,7 +201,7 @@ function RecommandProductElem() {
         const discountPrice = data.price * (1 - data.discountRate);
 
         recommandProductArr.push(
-            <li className="productsList">
+            <li className="productsList" key={i}>
                 <img src={ImgLoad(data.img)} />
                 <div className="dimmerBg">
                     <div className="dimmedCon">

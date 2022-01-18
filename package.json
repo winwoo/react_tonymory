@@ -23,6 +23,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
     "create-react-app": "^5.0.0",
+    "react-slick": "^0.28.1",
     "react-string-format": "^1.0.0"
   }
 }
