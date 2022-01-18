@@ -1,5 +1,11 @@
 
-export const A = ({ href, children }) => {
+export const A = ({ href, onClick, onMouseOver, children }) => {
     const path = href === undefined ? "#" : href;
-    return (<a href={path}>{children}</a>);
+    return (
+        <a href={path}
+            onClick={onClick}
+            onMouseOver={onMouseOver}>
+            {children}
+        </a>
+    );
 }

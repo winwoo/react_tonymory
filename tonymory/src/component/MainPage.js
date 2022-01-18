@@ -22,12 +22,6 @@ import { KeywordData, MainVisualData, RecommandProductData } from "../data/data"
 function MainPage() {
 
     let [shoppingNum, setShoppingNum] = useState(0);
-    let [isAutoSlide, setisAutoSlide] = useState(true);
-    let sliderRef = useRef(null);
-
-    useEffect(() => {
-        isAutoSlide ? sliderRef.current.slickPlay() : sliderRef.current.slickPause();
-    }, [isAutoSlide])
 
     return (
         <div className="Wrap">
@@ -81,24 +75,7 @@ function MainPage() {
             </div>
 
             <div className="mainVisualSlide">
-                <MainVisualSlide sliderRef={sliderRef} isAutoSlide={isAutoSlide} />
-                <div className="slideNavBar contentWrap">
-                    <A>빅세일</A>
-                    <A>토니랩1+1</A>
-                    <A>당첨자 발표</A>
-                    <A>리뷰이벤트</A>
-                    <A>토니팁톡</A>
-                    <A>1월 혜택</A>
-                    <A>T스튜디오</A>
-                    <A>뷰티테스터</A>
-                    <A>이달의신상</A>
-                    <A>비건라이너</A>
-                    <div className="sliderBtnBox" onClick={() => {
-                        setisAutoSlide(!isAutoSlide);
-                    }}>
-                        {isAutoSlide ? "Auto" : "Stop"}
-                    </div>
-                </div>
+                <MainVisualSlide />
             </div>{/*End::mainVisual*/}
 
             <div className="contentWrap">
@@ -123,7 +100,14 @@ function MainPage() {
     );
 }
 
-function MainVisualSlide({ sliderRef }) {
+function MainVisualSlide() {
+    let [isAutoSlide, setisAutoSlide] = useState(true);
+    let sliderRef = useRef(null);
+
+    useEffect(() => {
+        isAutoSlide ? sliderRef.current.slickPlay() : sliderRef.current.slickPause();
+    }, [isAutoSlide]);
+
     function MainVisual({ data }) {
         return (
             <div className="mainImgContainer">
@@ -132,10 +116,23 @@ function MainVisualSlide({ sliderRef }) {
         );
     }
 
+    function MainNav({ index, data }) {
+        const navIndex = index;
+        return (
+            <A onMouseOver={() => {
+                sliderRef.current.slickGoTo(navIndex);
+            }}>
+                {data.navText}
+            </A>
+        );
+    }
+
     const mainVisualArr = [];
+    const navArr = [];
     for (let i = 0; i < MainVisualData.length; ++i) {
         const data = MainVisualData[i];
         mainVisualArr.push(<MainVisual key={i} data={data} />);
+        navArr.push(<MainNav key={i} index={i} data={data} />);
     }
 
     const settings = {
@@ -149,11 +146,19 @@ function MainVisualSlide({ sliderRef }) {
         pauseOnHover: false,
     };
     return (
-        <div>
+        <>
             <Slider ref={sliderRef} {...settings}>
                 {mainVisualArr}
             </Slider>
-        </div>
+            <div className="slideNavBar contentWrap">
+                {navArr}
+                <div className="sliderBtnBox" onClick={() => {
+                    setisAutoSlide(!isAutoSlide);
+                }}>
+                    {isAutoSlide ? "Auto" : "Stop"}
+                </div>
+            </div>
+        </>
     );
 }
 

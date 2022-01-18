@@ -1,33 +1,43 @@
 export const MainVisualData = [
     {
-        img: "event0509.jpg"
+        img: "event0509.jpg",
+        navText: "빅세일"
     },
     {
-        img: "event0510.jpg"
+        img: "event0510.jpg",
+        navText: "토니랩1+1"
     },
     {
-        img: "event0511.jpg"
+        img: "event0511.jpg",
+        navText: "당첨자 발표"
     },
     {
-        img: "event0512.jpg"
+        img: "event0512.jpg",
+        navText: "리뷰이벤트"
     },
     {
-        img: "event0513.jpg"
+        img: "event0513.jpg",
+        navText: "토니팁톡"
     },
     {
-        img: "event0514.jpg"
+        img: "event0514.jpg",
+        navText: "1월 혜택"
     },
     {
-        img: "event0515.jpg"
+        img: "event0515.jpg",
+        navText: "T스튜디오"
     },
     {
-        img: "event0516.jpg"
+        img: "event0516.jpg",
+        navText: "뷰티테스터"
     },
     {
-        img: "event0517.jpg"
+        img: "event0517.jpg",
+        navText: "이달의신상"
     },
     {
-        img: "event0518.jpg"
+        img: "event0518.jpg",
+        navText: "비건라이너"
     }
 ];
 
