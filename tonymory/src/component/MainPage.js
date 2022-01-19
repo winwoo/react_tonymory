@@ -1,6 +1,7 @@
 
 import "../css/common.css";
 import "../css/mainPage.css";
+import "../css/slick.css";
 import { A } from "./util/Common";
 import CommonImg, { ImgLoad } from "./ImgLoader";
 
@@ -198,6 +199,10 @@ function KeyWordElem() {
 
 function RecommandProductElem() {
     const recommandProductArr = [];
+    const recommandViewCount = 4;
+    const emptyCount = ProductData.length % 4;
+
+    // 실제 상품 셋팅
     for (let i = 0; i < ProductData.length; ++i) {
         const data = ProductData[i];
 
@@ -207,20 +212,51 @@ function RecommandProductElem() {
         recommandProductArr.push(<Product key={i} data={data} />);
     }
 
+    // 4개씩 보여지기 위해 빈 상품으로 채워줌
+    for (let i = 0; i < emptyCount; ++i) {
+        recommandProductArr.push(<Product key={i} data={null} />);
+    }
+
     const settings = {
         dots: true,
+        arrows: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: recommandViewCount,
+        slidesToScroll: recommandViewCount,
+        dotsClass: "slick-dots-custom",
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />
     };
+
+    function SampleNextArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={className}
+                style={{ ...style, display: "block", background: "red" }}
+                onClick={onClick}
+            />
+        );
+    }
+
+    function SamplePrevArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={className}
+                style={{ ...style, display: "block", background: "green" }}
+                onClick={onClick}
+            />
+        );
+    }
 
     return (
         <>
-            {/* <Slider {...settings}>
+            <Slider {...settings}>
                 {recommandProductArr}
-            </Slider> */}
-            {recommandProductArr}
+            </Slider>
+            {/* {recommandProductArr} */}
         </>
     );
 }

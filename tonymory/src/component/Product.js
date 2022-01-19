@@ -10,6 +10,9 @@ import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
 
 function Product({ data }) {
+    if (!data)
+        return null;
+
     return (
         <li className="productsList">
             <img src={ImgLoad(data.img)} />
@@ -70,7 +73,7 @@ function TagList({ tags }) {
 
     const tagArr = [];
     for (let i = 0; i < tags.length; ++i) {
-        tagArr.push(<span className="flag">{tags[i]}</span>)
+        tagArr.push(<span key={i} className="flag">{tags[i]}</span>)
     }
 
     return (

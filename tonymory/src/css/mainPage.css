@@ -85,7 +85,7 @@ header .userCon .iconBox .shoppingNum {display: inline-block; width: 15px; backg
 /* 추천상품 */
 /* =========================================== */
 .products {}
-.products .productsContainer {display: flex;}
+/* .products .productsContainer {display: flex;} */
 .products .productsContainer .productsList {position: relative; cursor: pointer; margin-right: 30px;}
 .products .productsContainer .productsList:last-child {margin-right: 0;}
 
