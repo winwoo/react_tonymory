@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import "../css/common.css";
 import "../css/mainPage.css";
 import { A } from "./util/Common";
@@ -9,14 +9,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-//추천상품 이미지
-import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
-
 import { useEffect, useRef, useState } from "react";
 
-import { KeywordData, MainVisualData, RecommandProductData } from "../data/data";
+import { KeywordData, MainVisualData, ProductData } from "../data/data";
+import Product from "./Product";
 
 
 function MainPage() {
@@ -88,6 +84,7 @@ function MainPage() {
 
                 <section className="products">
                     <p className="cl_headLineName">추천상품</p>
+                    {/* <RecommandProductElem /> */}
                     <ul className="productsContainer">
                         <RecommandProductElem />
                     </ul>
@@ -201,50 +198,31 @@ function KeyWordElem() {
 
 function RecommandProductElem() {
     const recommandProductArr = [];
-    for (let i = 0; i < RecommandProductData.length; ++i) {
-        const data = RecommandProductData[i];
-        const discountPrice = data.price * (1 - data.discountRate);
+    for (let i = 0; i < ProductData.length; ++i) {
+        const data = ProductData[i];
 
-        recommandProductArr.push(
-            <li className="productsList" key={i}>
-                <img src={ImgLoad(data.img)} />
-                <div className="dimmerBg">
-                    <div className="dimmedCon">
-                        <A>
-                            <span className="circle"> <FontAwesomeIcon icon={faShoppingBag} size="2x" /></span>
-                        </A>
-                        <A>
-                            <span className="circle"><FontAwesomeIcon icon={faHeart} size="2x" /></span>
-                        </A>
-                        <A>
-                            <span className="circle"><FontAwesomeIcon icon={faCreditCard} size="2x" /></span>
-                        </A>
-                    </div>
-                </div>
-                <div className="benefits">{data.couponDate}쿠폰 적용시 {data.couponPrice.toLocaleString()}원</div>
-                <div className="tonymoly">{data.category}</div>
-                <div className="productsName">{data.productName}</div>
-                <div className="productsPrice">
-                    <span className="percent">{data.discountRate * 100}%</span>
-                    <span className="price discount">{data.price.toLocaleString()}</span>
-                    <span className="price basicPrice">{discountPrice.toLocaleString()}</span>
-                </div>
-                { 
-                    data.isOnlyOnline || data.isFreeDelivery ?
-                        <div className="flagBox">
-                            {data.isOnlyOnline && <span className="flag">ONLY 온라인</span>}
-                            {data.isFreeDelivery && <span className="flag">무배</span>}
-                        </div> :
-                        null
-                }
-                <div className="grade">
-                    <span className="score">★ {data.reviewScore}</span>
-                    <span className="review">리뷰 {data.reviewCount}</span>
-                </div>
-            </li>
-        );
+        if (!data.isRecommand)
+            continue;
+
+        recommandProductArr.push(<Product key={i} data={data} />);
     }
-    return recommandProductArr;
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+    };
+
+    return (
+        <>
+            {/* <Slider {...settings}>
+                {recommandProductArr}
+            </Slider> */}
+            {recommandProductArr}
+        </>
+    );
 }
 
 export default MainPage;
