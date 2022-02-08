@@ -1,5 +1,7 @@
 
-import "../css/common.css";
+import "../css/base.css"; //base
+import "../css/fonts.css"; //fonts
+import "../css/common.css"; //공통CSS
 import "../css/mainPage.css";
 import "../css/slick.css";
 import { A } from "./util/Common";
@@ -91,9 +93,45 @@ function MainPage() {
                     </ul>
                 </section>
 
+                <section className="eventArea">
+                    <A><img src={CommonImg.eventImg00}/></A>
+                    <A><img src={CommonImg.eventImg01}/></A>
+                </section>
+
+
+                <section className="bestContainer">
+                    <p className="cl_headLineName">이 시각, 인기 절정 베스트
+                        <A>더 많은 상품보기</A>
+                    </p>
+
+                </section>
+
+                <section className="bestContainer">
+                    <p className="cl_headLineName">같이 볼래요? 꿀잼 토니팁톡
+                        <A>더 많은 상품보기</A>
+                    </p>
+
+                </section>
+                <section className="bestContainer">
+                    <p className="cl_headLineName">직접 써보고 작성한 찐 리뷰
+                        <A>더 많은 상품보기</A>
+                    </p>
+
+                </section>
+                <section className="bestContainer">
+                    <p className="cl_headLineName">눈이 번쩍! 신상이 도착했어요
+                        <A>더 많은 상품보기</A>
+                    </p>
+
+                </section>
+                <section className="bestContainer">
+                    <p className="cl_headLineName">한 눈에 보는 추천 라인</p>
+
+                </section>
+                {/*End::contentWrap*/}
             </div>
 
-            {/*End::Wrap*/}
+        {/*End::Wrap*/}
         </div>
     );
 }

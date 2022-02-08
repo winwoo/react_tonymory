@@ -27,6 +27,19 @@ const CommonImg = {
     heart_icon: ImgLoad("heart_icon.png"),
     credit_icon: ImgLoad("credit_icon.png"),
     products00: ImgLoad("products00.jpg"),
+    products01: ImgLoad("products01.jpg"),
+    products02: ImgLoad("products02.jpg"),
+    products03: ImgLoad("products03.jpg"),
+    products03: ImgLoad("products04.jpg"),
+    products03: ImgLoad("products05.jpg"),
+    products03: ImgLoad("products06.jpg"),
+    products03: ImgLoad("products07.jpg"),
+    products03: ImgLoad("products08.jpg"),
+    products03: ImgLoad("products09.jpg"),
+    products03: ImgLoad("products10.jpg"),
+    products03: ImgLoad("products11.jpg"),
+    eventImg00: ImgLoad("evt00.jpg"),
+    eventImg01: ImgLoad("evt01.jpg"),
 };
 
 
