@@ -14,9 +14,10 @@ import "slick-carousel/slick/slick-theme.css";
 
 //폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
-import { useEffect, useRef, useState } from "react";
+import { React, useEffect, useRef, useState } from "react";
 import { KeywordData, MainVisualData, ProductData } from "../data/data";
 import Product from "./Product";
 
@@ -155,8 +156,8 @@ function MainPage() {
                                 <span>주말 및 공휴일은 1:1문의하기를 이용해 주세요. 업무가 시작되면 바로 처리해 드리겠습니다.</span>
                             </div>
                             <div className="qBox">
-                                <A>자주묻는 질문 <FontAwesomeIcon icon={faHeart}  /></A>
-                                <A>1:1문의 <FontAwesomeIcon icon={faHeart}  /></A>
+                                <A>자주묻는 질문 <FontAwesomeIcon icon={faChevronRight}  /></A>
+                                <A>1:1문의 <FontAwesomeIcon icon={faChevronRight}  /></A>
                             </div>
                         </div>
                         <div className="serviceList rgt">
@@ -192,8 +193,8 @@ function MainPage() {
                                 <p>ⓒ TONYMOLY. ALL RIGHTS RESERVED</p>
                             </div>
                             <div className="snsBox">
-                                <A className="circle">페북</A>
-                                <A className="circle">인별</A>
+                                <A className="circle"><FontAwesomeIcon icon={faFacebookF}  /></A>
+                                <A className="circle"><FontAwesomeIcon icon={faInstagram}  /></A>
                             </div>
                         </address>
                     </div>
