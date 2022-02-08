@@ -1,29 +1,31 @@
 @charset "UTF-8";
 
 /*
-	*** S-Core Dream ***
+	*** Hestia ***
 */
 @font-face {
     font-family:'NotoSansKRB';
-    src: url(../fonts/NotoSansKR-Bold-Hestia.woff) format('woff'),
+    src: url(../fonts/NotoSansKR-Bold-Hestia.woff) format('woff');
 }
 @font-face {
     font-family:'NotoSansKRL';
-    src: url(../fonts/NotoSansKR-Light-Hestia.woff) format('woff'),
+    src: url(../fonts/NotoSansKR-Light-Hestia.woff) format('woff');
 }
 @font-face {
     font-family:'NotoSansKRDL';
-    src: url(../fonts/NotoSansKR-DemiLight-Hestia.woff) format('woff'),
+    src: url(../fonts/NotoSansKR-DemiLight-Hestia.woff) format('woff');
 }
 @font-face {
     font-family:'NotoSansKRM';
-    src: url(../fonts/NotoSansKR-Medium-Hestia.woff) format('woff'),
+    src: url(../fonts/NotoSansKR-Medium-Hestia.woff) format('woff');
 }
+
+/*  기본글씨 세팅 */
 @font-face {
     font-family:'NotoSansKRR';
-    src: url(../fonts/NotoSansKR-Regular-Hestia.woff) format('woff'),
+    src: url(../fonts/NotoSansKR-Regular-Hestia.woff) format('woff');
 }
 @font-face {
     font-family:'NotoSansKRT';
-    src: url(../fonts/NotoSansKR-Thin-Hestia.woff) format('woff'),
+    src: url(../fonts/NotoSansKR-Thin-Hestia.woff) format('woff');
 }

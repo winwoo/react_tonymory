@@ -1,3 +1,5 @@
+import "../css/base.css"; //base
+import "../css/fonts.css"; //fonts
 import "../css/common.css";
 import "../css/mainPage.css";
 import { ImgLoad } from "./ImgLoader";

@@ -3,7 +3,7 @@
 /* layout */
 /* =========================================== */
 .Wrap {}
-.contentWrap {max-width: 1270px; width: 100%; margin: 0 auto;}
+.contentWrap {max-width: 1270px; width: 100%; margin: 0 auto; padding: 0 30px; box-sizing: border-box;}
 
 
 
@@ -47,6 +47,60 @@ header .userCon .iconBox .shoppingNum {display: inline-block; width: 15px; backg
 .navContainer .navList {height: inherit;}
 .navContainer .navList a {display: inline-block; padding: 0 31px;}
 
+/* =========================================== */
+/* footer */
+/* =========================================== */
+footer {background-color: #FAFAFA; border-top: 1px solid #E8E8E8;}
+footer .companyInforBox {display: flex; align-items: center; height: 54px; border-bottom: 1px solid #E8E8E8;}
+footer .companyInforBox a {font-size: 15px; color: #777777; font-family:'NotoSansKRDL'; box-sizing: border-box; cursor: pointer;}
+footer .companyInforBox a:nth-child(5) {color: #000; font-weight: 700;}
+footer .companyInforBox a:nth-child(5):hover {color: #000;}
+footer .companyInforBox a:hover {color: #FE5342;}
+footer .companyInforBox a:after {content: ''; display: inline-block; width: 1px; height: 15px; margin: 0 8px; box-sizing: border-box; background-color: #E0E3E8;}
+footer .companyInforBox a:last-child:after {content:none;}
+
+footer .footerServiceContainer {display: flex; justify-content: space-between; border-bottom: 1px solid #E8E8E8; padding: 2em;}
+footer .serviceList.lft > div {font-size: 15px; color: #222; font-family:'NotoSansKRM';}
+footer .serviceList.lft .num {margin-bottom: 10px; font-size: 34px; color: #FC5443; cursor: pointer;}
+
+footer .serviceList.lft .time {margin-bottom: 27px;}
+footer .serviceList.lft .time span {font-size: 14px; color: #111; font-family:'NotoSansKRDL';}
+footer .serviceList.lft .time span:nth-child(1):after {content: ''; display: inline-block; width: 1px; height: 10px; margin: 0 8px; box-sizing: border-box; background-color: #111;}
+footer .serviceList.lft .time span:last-child {display: block;}
+
+footer .serviceList.lft .qBox {display: flex;}
+footer .serviceList.lft .qBox a {display: flex; justify-content: center; align-items: center; width: auto; height: 32px; margin-right: 5px; border-radius: 16px; padding: 0 25px; background-color: #111; color: #fff;}
+footer .serviceList.lft .qBox a:after {content:''; display: inline-block;}
+footer .serviceList.lft .qBox a:last-child {margin-right: 0;}
+
+footer  .serviceList.rgt {width: 30%;}
+footer  .serviceList.rgt .cl_headLineName {display: flex; align-items: center; height: 45px; margin-bottom: 0; font-size: 15px; border-bottom: 1px solid #E8E8E8;}
+footer  .serviceList.rgt .cl_headLineName a {font-size: 13px;}
+footer  .serviceList.rgt .noticeBox {display: flex; flex-direction: column; font-size: 15px; color: #888;}
+footer  .serviceList.rgt .noticeBox a {overflow: hidden; height: 34px; line-height: 34px; text-overflow: ellipsis; white-space: nowrap; color: #888;}
+footer  .serviceList.rgt .noticeBox a:hover {text-decoration: underline; font-family:'NotoSansKRDL';}
+
+.addContainer {padding: 2em;}
+footer address {position:relative; display: flex; justify-content: space-between; font-size: 15px; font-style: normal; font-family:'NotoSansKRDL';}
+footer address .comName {margin-bottom: 5px; color: #222;}
+
+footer address .comPakages {margin-bottom: 20px;}
+footer address .comPakages.wrap {display: flex; flex-wrap: wrap; width: 50%;}
+footer address .comPakages.wrap span:first-child {margin-right: 0;}
+footer address .comPakages.wrap span:after {content: ''; display: inline-block; width: 1px; height: 10px; margin: 0 8px; box-sizing: border-box; background-color: #777;}
+footer address .comPakages.wrap span:last-child:after {content: none;}
+
+footer address .comPakages span:first-child {color: #111; margin-right: 5px;}
+footer address .comPakages span:last-child {margin-right: 0;}
+footer address .comPakages span:after {content: none;}
+footer address .comPakages a {font-size: 13px; color: #111;}
+footer address .comPakages a:hover {text-decoration: underline; color: #111;}
+footer address .comPakages span {font-size: 13px; color: #777;}
+footer address .addBox p {color: rgba(153, 153, 153, .6);}
+
+footer address .snsBox {position: absolute; right: 0; top: 0; display: flex;}
+footer address .snsBox a {display: flex; justify-content: center; align-items: center; background-color: #AFAFAF; width: 40px; height: 40px; margin-right: 10px; border-radius: 50%;}
+footer address .snsBox a:last-child {margin-right: 0;}
 
 /* =========================================== */
 /* mainVisual */
@@ -58,7 +112,7 @@ header .userCon .iconBox .shoppingNum {display: inline-block; width: 15px; backg
 .mainVisualSlide .slideNavBar {position: relative; display: flex; justify-content: center; height: 51px; line-height: 51px;}
 .mainVisualSlide .slideNavBar a {display: block; width: 116px; height: inherit; border-left: 1px solid #E3E7ED; border-bottom: 1px solid #E3E7ED; box-sizing: border-box;}
 .mainVisualSlide .slideNavBar a:hover {background-color: #000; color: #fff;}
-.mainVisualSlide .sliderBtnBox {position: relative; right: 0; width: 50px; height: inherit; border-bottom: 1px solid #E3E7ED; background-color: #FE5342;}
+.mainVisualSlide .sliderBtnBox {position: relative; right: 0; width: 50px; height: inherit; border-bottom: 1px solid #E3E7ED; background-color: #b1b1b1;}
 
 /* =========================================== */
 /* 눈이 가는 핫#키워드 */

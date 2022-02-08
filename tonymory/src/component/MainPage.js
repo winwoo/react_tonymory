@@ -12,8 +12,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { useEffect, useRef, useState } from "react";
+//폰트어썸
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
+import { useEffect, useRef, useState } from "react";
 import { KeywordData, MainVisualData, ProductData } from "../data/data";
 import Product from "./Product";
 
@@ -47,7 +50,6 @@ function MainPage() {
                         </div>
                     </div>
                 </header>
-
             </div> {/*End::contentWrap*/}
 
             {/*start::navContainer*/}
@@ -131,6 +133,73 @@ function MainPage() {
                 {/*End::contentWrap*/}
             </div>
 
+            {/*start::footer*/}
+            <footer>
+                <div className="contentWrap">
+                    <div className="companyInforBox">
+                        <A>회사소개</A>
+                        <A>매장정보</A>
+                        <A>가맹점&특판문의</A>
+                        <A>이용약관</A>
+                        <A>개인정보처리방침</A>
+                        <A>이메일 무단 수집거부</A>
+                    </div>
+
+                    <div className="footerServiceContainer">
+                        <div className="serviceList lft">
+                            <div>고객센터 이용안내</div>
+                            <div className="num">080-356-2222</div>
+                            <div className="time">
+                                <span>평일 10:00~18:00 (주말 및 공휴일 휴무)</span>
+                                <span>점심 12:00~13:00</span>
+                                <span>주말 및 공휴일은 1:1문의하기를 이용해 주세요. 업무가 시작되면 바로 처리해 드리겠습니다.</span>
+                            </div>
+                            <div className="qBox">
+                                <A>자주묻는 질문 <FontAwesomeIcon icon={faHeart}  /></A>
+                                <A>1:1문의 <FontAwesomeIcon icon={faHeart}  /></A>
+                            </div>
+                        </div>
+                        <div className="serviceList rgt">
+                            <p className="cl_headLineName">공지사항
+                                <A>바로가기</A>
+                            </p>
+                            <div className="noticeBox">
+                                <A>포인트 소멸 안내포인트 소멸 안내포인트 소멸 안내 포인트 소멸 안내</A>
+                                <A>구주주 청약결과 및 일반공모 안내 구주주 청약결과 및 일반공모 안내구주주 청약결과 및 일반공모 안내</A>
+                                <A>신주발행가액 확정 공고</A>
+                                <A>사이트 점검 및 업데이트 안내</A>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div className="addContainer">
+                        <address>
+                            <div className="addBox">
+                                <div className="comName">(주)토니모리</div>
+                                <div className="comPakages wrap">
+                                    <span>서울특별시 서초구 남부순환로 2557</span>
+                                    <span>사업자번호 : 114-86-53270</span>
+                                    <A>사업자 정보확인</A>
+                                    <span>통신판매업신고번호: 제2015-서울서초-0615호</span>
+                                    <span>대표이사 : 배해동</span>
+                                    <span>개인정보보호책임자 : 김옥엽</span>
+                                </div>
+                                <div className="comPakages">
+                                    <span>(주)이니시스 구매안전서비스</span>
+                                    <span>고객님의 안전거래를 위해 현금 거래에 대해 이니페이 에스크로서비스를 이용하실 수 있습니다.</span>
+                                    <A>서비스 가입사실확인</A>
+                                </div>
+                                <p>ⓒ TONYMOLY. ALL RIGHTS RESERVED</p>
+                            </div>
+                            <div className="snsBox">
+                                <A className="circle">페북</A>
+                                <A className="circle">인별</A>
+                            </div>
+                        </address>
+                    </div>
+                </div>
+                
+            </footer>
         {/*End::Wrap*/}
         </div>
     );
