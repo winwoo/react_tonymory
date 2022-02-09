@@ -30,6 +30,28 @@ function Product({ data }) {
                     </A>
                 </div>
             </div>
+            {/* 상품 레이아웃 공통 부분 */}
+            <ProductInfo data={data} />
+        </li>
+    );
+}
+
+export function ProductRow({ data }) {
+    return (
+        // 가로용 상품 컴포넌트
+        // 여기에 레이아웃 작업해주세요.
+        <li className="productsList">
+            {"가로용 상품 컴포넌트"}
+            <img src={ImgLoad(data.img)} />
+            {/* ProductInfo는 기존 Product컴포넌트와 공통 레이아웃 입니다. */}
+            <ProductInfo data={data} />
+        </li>
+    )
+}
+
+function ProductInfo({ data }) {
+    return (
+        <>
             <Banefit banefit={data.benefits} />
             <div className="tonymoly">{data.category}</div>
             <div className="productsName">{data.productName}</div>
@@ -39,7 +61,7 @@ function Product({ data }) {
                 <span className="score">★ {data.reviewScore}</span>
                 <span className="review">리뷰 {data.reviewCount}</span>
             </div>
-        </li>
+        </>
     );
 }
 

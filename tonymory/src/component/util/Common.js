@@ -1,8 +1,9 @@
 
-export const A = ({ href, onClick, onMouseOver, children }) => {
+export const A = ({ href, onClick, onMouseOver, children, className }) => {
     const path = href === undefined ? "#" : href;
     return (
-        <a href={path}
+        <a className={className} 
+            href={path}
             onClick={onClick}
             onMouseOver={onMouseOver}>
             {children}
