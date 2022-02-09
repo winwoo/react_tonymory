@@ -4,3 +4,8 @@
 .cl_headLineName > a {font-size: 13px; font-family:'NotoSansKRDL'; color: #777; cursor: pointer;}
 .cl_headLineName > a::after {content: '>'; display: inline-block;}
 .cl_headLineName > a:hover {text-decoration: underline;}
+
+.yellow {background-color: #f5d60b;}
+.green {background-color: #1ec800;}
+.black {background-color: #222;}
+.orange {background-color: #fe5342;}

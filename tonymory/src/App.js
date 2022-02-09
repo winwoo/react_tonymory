@@ -1,9 +1,11 @@
 
-import MainPage from './component/MainPage';
+// import MainPage from './component/MainPage';
+import LoginPage from './component/LoginPage';
 
 function App() {
   return (
-    <MainPage />
+    // <MainPage />
+      <LoginPage />
   );
 }
 

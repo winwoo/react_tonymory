@@ -200,3 +200,32 @@ footer address .snsBox a:last-child {margin-right: 0;}
 .eventArea a {margin-right: 10px;}
 .eventArea a:last-child {margin-right: 0;}
 .eventArea img {display: block; width: calc(100% /1);}
+
+
+/* =========================================== */
+/* index 로그인클릭 > 로그인창 */
+/* =========================================== */
+
+.logIn {}
+.logIn .logInContainer {display: flex; flex-direction: column; align-items: center; width: 500px; margin: 0 auto;}
+.logIn .logInContainer .loginTxt { text-align: center;font-size: 32px; color: #333; font-family:'NotoSansKRB';}
+.logIn .logInContainer > ul {display: flex; justify-content: center; height: 50px;}
+.logIn .logInContainer > ul li  {display: flex; align-items: center; justify-content: center; width: 240px; height: inherit; text-align: center;}
+
+.logIn input {width: 100%; height: 50px; padding: 10px; box-sizing: border-box; border: 1px solid #ddd; margin-bottom: 10px;}
+.logIn input::placeholder {font-size: 15px;}
+.logIn button {width: 100%; height: 50px; margin-bottom: 20px; background-color: #333; border: none; color: #fff;}
+
+ /* 체크박스 */
+.logIn .checkBox {display: flex; margin-bottom: 65px;}
+.logIn .checkBox label {position: relative; margin-right: 8px;}
+.logIn .checkBox label:last-child {margin-right: 0;}
+.logIn .checkBox input[type="checkbox"] {width: 20px; height: 20px; margin-right: 7px; margin-bottom: 0; appearance: none; outline: none;border: 1px solid #c6c6c6; box-sizing: border-box; }
+/* 체크되었을 때 */
+.logIn .checkBox input:checked {background-repeat: no-repeat; background-size: contain; background-position: center; background-image: url("../img/icon_check_box_fill.png"); appearance: none;}
+
+.logIn .snsBox {display: flex; justify-content: center;}
+.logIn .snsBox > a {display: flex; justify-content: center; align-items: center; width: 44px; height: 44px;}
+
+.logIn .subNotice {text-align: center; padding: 0 8.5rem; box-sizing: border-box;}
+.logIn .subNotice > span {color: #fe5342;}
