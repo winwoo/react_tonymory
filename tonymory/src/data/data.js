@@ -78,6 +78,7 @@ export const KeywordData = [
 
 export const ProductData = [
     {
+        num: 1,
         img: "products00.jpg",
         benefits: "#이벤트이벤트이벤트",
         category: "TONYMORLY",
@@ -90,6 +91,7 @@ export const ProductData = [
         reviewCount: 59
     },
     {
+        num: 2,
         img: "products01.jpg",
         benefits: "#이벤트이벤트이벤트",
         category: "TONYMORLY",
@@ -102,6 +104,7 @@ export const ProductData = [
         reviewCount: 59
     },
     {
+        num: 3,
         img: "products02.jpg",
         benefits: "#이벤트이벤트이벤트",
         category: "TONYMORLY",
@@ -114,6 +117,7 @@ export const ProductData = [
         reviewCount: 59
     },
     {
+        num: 4,
         img: "products03.jpg",
         benefits: "#이벤트이벤트이벤트",
         category: "TONYMORLY",
@@ -126,6 +130,7 @@ export const ProductData = [
         reviewCount: 59
     },
     {
+        num: 5,
         img: "products04.jpg",
         benefits: "#이벤트이벤트이벤트",
         category: "TONYMORLY",
@@ -138,6 +143,7 @@ export const ProductData = [
         reviewCount: 59
     },
     {
+        num: 6,
         img: "products05.jpg",
         benefits: "#이벤트이벤트이벤트",
         category: "TONYMORLY",
@@ -150,6 +156,7 @@ export const ProductData = [
         reviewCount: 59
     },
     {
+        num: 7,
         img: "products06.jpg",
         benefits: "#이벤트이벤트이벤트",
         category: "TONYMORLY",
@@ -162,6 +169,7 @@ export const ProductData = [
         reviewCount: 59
     },
     {
+        num: 8,
         img: "products07.jpg",
         benefits: "#이벤트이벤트이벤트",
         category: "TONYMORLY",
