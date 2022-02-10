@@ -4,8 +4,8 @@ import LoginPage from './component/LoginPage';
 
 function App() {
   return (
-    // <MainPage />
-      <LoginPage />
+    <MainPage />
+      // <LoginPage />
   );
 }
 

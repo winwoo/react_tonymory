@@ -47,7 +47,7 @@ export function ProductRow({ data }) {
                 <span className="num orange">1</span>
                 <img src={ImgLoad(data.img)} />
                 {/* ProductInfo는 기존 Product컴포넌트와 공통 레이아웃 입니다. */}
-                <div className="productsInfor">
+                <div>
                     <ProductInfo data={data} />
                 </div>
                 <div className="iconBox">
@@ -57,7 +57,7 @@ export function ProductRow({ data }) {
             <div className="productsList row">
                 <span className="num black">2</span>
                 <img src={ImgLoad(data.img)} />
-                <div className="productsInfor">
+                <div>
                     <ProductInfo data={data} />
                 </div>
                 <div className="iconBox">
@@ -70,7 +70,7 @@ export function ProductRow({ data }) {
 
 function ProductInfo({ data }) {
     return (
-        <>
+        <div>
             <Banefit banefit={data.benefits} />
             <div className="tonymoly">{data.category}</div>
             <div className="productsName">{data.productName}</div>
@@ -80,7 +80,7 @@ function ProductInfo({ data }) {
                 <span className="score">★ {data.reviewScore}</span>
                 <span className="review">리뷰 {data.reviewCount}</span>
             </div>
-        </>
+        </div>
     );
 }
 
