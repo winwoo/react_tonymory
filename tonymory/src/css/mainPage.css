@@ -38,14 +38,18 @@ header .userCon .iconBox .iconList a .txt {font-size: 12px; color: #222;}
 
 header .userCon .iconBox .shoppingNum {display: inline-block; width: 15px; background-color: #FE5342; color: #fff; border-radius: 50%;}
 
-.navContainer {height: 56px; border-top: 1px solid #eee; border-bottom: 1px solid #888;}
+.navConWrapper {border-top: 1px solid #eee; border-bottom: 1px solid #888;}
+.navContainer {height: 56px;}
 .navContainer .navInner {position: relative; display: flex; flex-direction: row; justify-content: flex-start; align-items: center; height: 56px; line-height: 56px; font-size: 15px;}
 .navContainer .btnMenu {display: flex; height: inherit; border-left: 1px solid #E8ECF2; border-right: 1px solid #E8ECF2; }
 .navContainer .btnMenu a {display: block; padding: 0 31px;}
 .navContainer .btnMenu img {display: inline-block; width: 20px; height: 20px;}
 .navContainer .btnMenu span {margin-left: 10px;}
 .navContainer .navList {height: inherit;}
-.navContainer .navList a {display: inline-block; padding: 0 31px;}
+.navContainer .navList a {display: inline-block; height: inherit; padding: 0 31px;}
+.navContainer .navList a > span {display: inline-block; width: 5px; height: 5px; border-radius: 100%; vertical-align: 15px;}
+
+.navContainer .navList a:hover {color: #fe5342; border-bottom: 1px solid #fe5342;}
 
 /* navCategory */
 .navCategoryCon {position: absolute; z-index: 30; left: 0; top: 56px; width: 100%; padding: 0 1em; box-sizing: border-box; background-color: #fff;
@@ -189,9 +193,76 @@ footer address .snsBox a:last-child {margin-right: 0;}
 /*.slick-arrow {top: 105% !important;}*/
 /*.slick-arrow.slick-prev {left: 42% !important; background: transparent !important;}*/
 /*.slick-arrow.slick-next {left: 56% !important; background: transparent !important;}*/
-.slick-prev:before, .slick-next:before {color: red!important; cursor: pointer;}
+.slick-prev:before {color: blue;}
+.slick-next:before {cursor: pointer;}
+
+/* =========================================== */
+/* 인기 절정 베스트 :: Product.js */
+/* =========================================== */
+.productRowflexWrap {display: flex; flex-wrap: wrap; justify-content: space-between;}
+.productsList.row {position: relative; display: flex; flex-direction: row; align-items: center; padding: 20px 0; box-sizing: border-box; border-bottom: 1px solid #E8E8E8;}
+.productsList.row > div {margin-bottom: 0; margin-right: 10px;}
+.productsList.row > div:last-child {margin-right: 0;}
+.productsList.row > img {width: auto; height: 148px; border: none; margin-right: 10px; margin-bottom: 0;}
+.productsList.row .num {position: absolute; top: 28px; left: -15px; display: flex; width: 43px; height: 43px; font-size: 21px; border-radius: 6px; color: #fff; align-items: center; justify-content: center;}
+.productsList.row .iconBox {display: flex; align-items: center;}
+.productsList.row .iconBox > .icon {font-size: 25px; cursor: pointer;}
+
+/* =========================================== */
+/* 꿀잼 토니팁톡 :: Product.js */
+/* =========================================== */
+
+.tiptocCon {border: 1px solid #D3D3D3; box-sizing: border-box;}
+.tiptocCon .tiptocInner {display: flex;}
+.tiptocCon .tiptocInner a {display: block; width: 300px; font-size: 0;}
+.tiptocCon .tiptocInner img {display: inherit; width: inherit;}
 
 
+/* =========================================== */
+/* index 로그인클릭 > 로그인창 :: LogInPage.js */
+/* =========================================== */
+
+.logIn {}
+.logIn .logInContainer {display: flex; flex-direction: column; align-items: center; width: 500px; margin: 0 auto;}
+.logIn .logInContainer .loginTxt {margin-bottom: 20px; text-align: center;font-size: 32px; color: #333; font-family:'NotoSansKRB';}
+.logIn .logInContainer > ul {display: flex; justify-content: space-between; width: 100%; height: 50px; margin-bottom: 30px; border-bottom: 2px solid #FE5342;}
+.logIn .logInContainer > ul li  {display: flex; align-items: center; justify-content: center; width: 49%; height: inherit; text-align: center;}
+
+.logIn .logInContainer > ul li span {width: 100%; height: 100%; line-height: 46px; border: 1px solid #e6e6e6; box-sizing: border-box; background-color: #f3f6f7; color: #777;}
+
+/* active 붙었을 때 */
+.logIn .logInContainer > ul li.active span {height: 53px; color: #222;border-width: 2px 2px 0 2px; border-style: solid; border-color: #FE5342; background: #fff;}
+
+.logIn input {width: 100%; height: 50px; padding: 10px; box-sizing: border-box; border: 1px solid #ddd; margin-bottom: 10px;}
+.logIn input::placeholder {font-size: 15px;}
+.logIn button {height: 50px; margin-bottom: 20px; background-color: #333; cursor: pointer;}
+
+/* 체크박스 */
+.logIn .checkBox {display: flex; margin-bottom: 25px;}
+.logIn .checkBox label {position: relative; margin-right: 8px;}
+.logIn .checkBox label:last-child {margin-right: 0;}
+.logIn .checkBox input[type="checkbox"] {width: 20px; height: 20px; margin-right: 7px; margin-bottom: 0; appearance: none; outline: none;border: 1px solid #c6c6c6; box-sizing: border-box; }
+/* 체크되었을 때 */
+.logIn .checkBox input:checked {background-repeat: no-repeat; background-size: contain; background-position: center; background-image: url("../img/icon_check_box_fill.png"); appearance: none;}
+
+.logIn .snsBox {display: flex; justify-content: center; margin-bottom: 30px;}
+.logIn .snsBox > a {display: flex; justify-content: center; align-items: center; border-radius: 100%; width: 44px; height: 44px; margin-right: 10px; color: #fff;}
+.logIn .snsBox > a:last-child {margin-right: 0;}
+.logIn .snsBox img {display: block; width: 20px;}
+
+.logIn .subNotice {text-align: center; padding: 0 8.5rem; margin-bottom: 25px; box-sizing: border-box;}
+.logIn .subNotice > span {color: #fe5342;}
+
+.logIn .findUser {display: flex; justify-content: center; align-items: center; height: 22px;}
+.logIn .findUser span::after {content : ''; display: inline-block;  width: 1px; height: 12px; margin: 0 8px; box-sizing: border-box; background-color: #e3e7ed;}
+.logIn .findUser span:last-child::after {content: none;}
+.logIn .findUser a {color: #111;}
+
+/* 비회원주문조회 */
+.logIn .noMember .signUpBox {border-top: 1px solid #e0e0e0;}
+.logIn .noMember .signUpBox > p {color: #777; font-size: 15px; padding: 10px 0;}
+.logIn .noMember .cl_defaultBtn {margin-bottom: 50px;}
+.logIn .noMember .signUpBtn {background: #fff; color: #333; border: 1px solid #e0e0e0; box-sizing: border-box;}
 
 /* =========================================== */
 /* 이벤트영역 */
@@ -200,32 +271,3 @@ footer address .snsBox a:last-child {margin-right: 0;}
 .eventArea a {margin-right: 10px;}
 .eventArea a:last-child {margin-right: 0;}
 .eventArea img {display: block; width: calc(100% /1);}
-
-
-/* =========================================== */
-/* index 로그인클릭 > 로그인창 */
-/* =========================================== */
-
-.logIn {}
-.logIn .logInContainer {display: flex; flex-direction: column; align-items: center; width: 500px; margin: 0 auto;}
-.logIn .logInContainer .loginTxt { text-align: center;font-size: 32px; color: #333; font-family:'NotoSansKRB';}
-.logIn .logInContainer > ul {display: flex; justify-content: center; height: 50px;}
-.logIn .logInContainer > ul li  {display: flex; align-items: center; justify-content: center; width: 240px; height: inherit; text-align: center;}
-
-.logIn input {width: 100%; height: 50px; padding: 10px; box-sizing: border-box; border: 1px solid #ddd; margin-bottom: 10px;}
-.logIn input::placeholder {font-size: 15px;}
-.logIn button {width: 100%; height: 50px; margin-bottom: 20px; background-color: #333; border: none; color: #fff;}
-
- /* 체크박스 */
-.logIn .checkBox {display: flex; margin-bottom: 65px;}
-.logIn .checkBox label {position: relative; margin-right: 8px;}
-.logIn .checkBox label:last-child {margin-right: 0;}
-.logIn .checkBox input[type="checkbox"] {width: 20px; height: 20px; margin-right: 7px; margin-bottom: 0; appearance: none; outline: none;border: 1px solid #c6c6c6; box-sizing: border-box; }
-/* 체크되었을 때 */
-.logIn .checkBox input:checked {background-repeat: no-repeat; background-size: contain; background-position: center; background-image: url("../img/icon_check_box_fill.png"); appearance: none;}
-
-.logIn .snsBox {display: flex; justify-content: center;}
-.logIn .snsBox > a {display: flex; justify-content: center; align-items: center; width: 44px; height: 44px;}
-
-.logIn .subNotice {text-align: center; padding: 0 8.5rem; box-sizing: border-box;}
-.logIn .subNotice > span {color: #fe5342;}

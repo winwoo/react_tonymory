@@ -63,8 +63,8 @@ function MainPage() {
             </div> {/*End::contentWrap*/}
 
             {/*start::navContainer*/}
-            <div className="contentWrap">
-                <div className="navContainer">
+            <div className="navConWrapper">
+                <div className="navContainer contentWrap">
                     <div className="navInner">
                         <div className="btnMenu" onMouseEnter={onEnterNavCategory} onMouseLeave={onLeaveNavCategory}>
                             <A>
@@ -73,7 +73,7 @@ function MainPage() {
                             </A>
                         </div>
                         <nav className="navList">
-                            <A>베스트</A>
+                            <A>베스트<span className="orange"></span></A>
                             <A>신상</A>
                             <A>커뮤니티</A>
                             <A>토니팁톡</A>
@@ -114,27 +114,45 @@ function MainPage() {
                 </section>
 
 
-                <section className="bestContainer">
+                <section className="bestContainer divisionSpace">
                     <p className="cl_headLineName">이 시각, 인기 절정 베스트
                         <A>더 많은 상품보기</A>
                     </p>
                     {/* 가로용 상품 컴포넌트 사용 예시 */}
                     <ProductRow data={ProductData[0]} />
+                    <ProductRow data={ProductData[0]} />
+                    <ProductRow data={ProductData[0]} />
                 </section>
 
-                <section className="bestContainer">
+                <section className="tiptoc divisionSpace">
                     <p className="cl_headLineName">같이 볼래요? 꿀잼 토니팁톡
                         <A>더 많은 상품보기</A>
                     </p>
-
+                    <div className="tiptocCon">
+                        <div className="tiptocInner">
+                            <A><img src={CommonImg.tiptoc00} /></A>
+                            <div className="infor">
+                                <div>지친 피부엔? 퀵 카밍 노하우</div>
+                                <div>장기간 마스크 생활로 울긋불긋 자극 받은 내 피부. 지친 피부를 구원해 줄 듀오가 떴다!</div>
+                                <div className="hashtag">
+                                    <A>#어성초시카</A>
+                                    <A>#어성초토너</A>
+                                    <A>#어성초패드</A>
+                                    <A>#손상흡토</A>
+                                    <A>#수분진정</A>
+                                    <A>#각질케어</A>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-                <section className="bestContainer">
+                <section className="bestContainer divisionSpace">
                     <p className="cl_headLineName">직접 써보고 작성한 찐 리뷰
                         <A>더 많은 상품보기</A>
                     </p>
 
                 </section>
-                <section className="bestContainer">
+                <section className="bestContainer divisionSpace">
                     <p className="cl_headLineName">눈이 번쩍! 신상이 도착했어요
                         <A>더 많은 상품보기</A>
                     </p>

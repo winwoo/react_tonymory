@@ -21,6 +21,8 @@ const CommonImg = {
     iconShoppingBag: ImgLoad("icon_shoppingbag.png"),
     iconProducts: ImgLoad("icon_products.png"),
     iconNav: ImgLoad("icon_nav.png"),
+    iconNaver : ImgLoad("icon_naver.png"),
+    iconKakao : ImgLoad("icon_kakao.png"),
     //mainVisual 이미지
     mainVisualImg00: ImgLoad("event0518.jpg"),
     //추천상품 이미지
@@ -38,8 +40,14 @@ const CommonImg = {
     products03: ImgLoad("products09.jpg"),
     products03: ImgLoad("products10.jpg"),
     products03: ImgLoad("products11.jpg"),
+    //이벤트 이미지
     eventImg00: ImgLoad("evt00.jpg"),
     eventImg01: ImgLoad("evt01.jpg"),
+    //토니팁톡 이미지
+    tiptoc00 : ImgLoad("tiptocImg00.jpg"),
+    tiptoc01 : ImgLoad("tiptocImg01.jpg"),
+    tiptoc02 : ImgLoad("tiptocImg02.jpg"),
+
 };
 
 

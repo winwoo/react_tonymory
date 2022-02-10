@@ -15,7 +15,7 @@ function Product({ data }) {
         return null;
 
     return (
-        <li className="productsList">
+        <div className="productsList">
             <img src={ImgLoad(data.img)} />
             <div className="dimmerBg">
                 <div className="dimmedCon">
@@ -32,7 +32,7 @@ function Product({ data }) {
             </div>
             {/* 상품 레이아웃 공통 부분 */}
             <ProductInfo data={data} />
-        </li>
+        </div>
     );
 }
 
@@ -40,12 +40,31 @@ export function ProductRow({ data }) {
     return (
         // 가로용 상품 컴포넌트
         // 여기에 레이아웃 작업해주세요.
-        <li className="productsList">
-            {"가로용 상품 컴포넌트"}
-            <img src={ImgLoad(data.img)} />
-            {/* ProductInfo는 기존 Product컴포넌트와 공통 레이아웃 입니다. */}
-            <ProductInfo data={data} />
-        </li>
+
+        <div className="productRowflexWrap">
+            <div className="productsList row">
+                {/*{"가로용 상품 컴포넌트"}*/}
+                <span className="num orange">1</span>
+                <img src={ImgLoad(data.img)} />
+                {/* ProductInfo는 기존 Product컴포넌트와 공통 레이아웃 입니다. */}
+                <div className="productsInfor">
+                    <ProductInfo data={data} />
+                </div>
+                <div className="iconBox">
+                    <FontAwesomeIcon className="icon" icon={faHeart} size="2x" />
+                </div>
+            </div>
+            <div className="productsList row">
+                <span className="num black">2</span>
+                <img src={ImgLoad(data.img)} />
+                <div className="productsInfor">
+                    <ProductInfo data={data} />
+                </div>
+                <div className="iconBox">
+                    <FontAwesomeIcon className="icon" icon={faHeart} size="2x" />
+                </div>
+            </div>
+        </div>
     )
 }
 

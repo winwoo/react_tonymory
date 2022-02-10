@@ -5,7 +5,14 @@
 .cl_headLineName > a::after {content: '>'; display: inline-block;}
 .cl_headLineName > a:hover {text-decoration: underline;}
 
+/*기본 버튼 모양*/
+.cl_defaultBtn {width: 100%; border: none; color: #fff;}
+
+/* 색상 */
 .yellow {background-color: #f5d60b;}
 .green {background-color: #1ec800;}
 .black {background-color: #222;}
 .orange {background-color: #fe5342;}
+
+/* 컨텐츠간 여백 */
+.divisionSpace {margin-bottom: 90px;}
