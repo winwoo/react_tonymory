@@ -38,16 +38,11 @@ function Product({ data }) {
 
 export function ProductRow({ data }) {
     return (
-        // 가로용 상품 컴포넌트
-        // 여기에 레이아웃 작업해주세요.
         <div className="productsList row">
-            {/*{"가로용 상품 컴포넌트"}*/}
-            <span className="num orange"> {data.num} </span>
+            <Num num={data.num} />
             <img src={ImgLoad(data.img)} />
-            {/* ProductInfo는 기존 Product컴포넌트와 공통 레이아웃 입니다. */}
-            <div>
-                <ProductInfo data={data} />
-            </div>
+            {/* 상품 레이아웃 공통 부분 */}
+            <ProductInfo data={data} />
             <div className="iconBox">
                 <FontAwesomeIcon className="icon" icon={faHeart} size="2x" />
             </div>
@@ -114,6 +109,16 @@ function TagList({ tags }) {
             }
         </>
     );
+}
+
+function Num({ num }) {
+    if (num < 4) {
+        // 1~3 num 레이아웃
+        return <span className="num orange"> {num} </span>;
+    } else {
+        // 그 외 레이아웃
+        return <span className="num orange"> {num} </span>;
+    }
 }
 
 export default Product;
