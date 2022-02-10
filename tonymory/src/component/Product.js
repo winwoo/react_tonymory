@@ -40,29 +40,16 @@ export function ProductRow({ data }) {
     return (
         // 가로용 상품 컴포넌트
         // 여기에 레이아웃 작업해주세요.
-
-        <div className="productRowflexWrap">
-            <div className="productsList row">
-                {/*{"가로용 상품 컴포넌트"}*/}
-                <span className="num orange">1</span>
-                <img src={ImgLoad(data.img)} />
-                {/* ProductInfo는 기존 Product컴포넌트와 공통 레이아웃 입니다. */}
-                <div>
-                    <ProductInfo data={data} />
-                </div>
-                <div className="iconBox">
-                    <FontAwesomeIcon className="icon" icon={faHeart} size="2x" />
-                </div>
+        <div className="productsList row">
+            {/*{"가로용 상품 컴포넌트"}*/}
+            <span className="num orange">1</span>
+            <img src={ImgLoad(data.img)} />
+            {/* ProductInfo는 기존 Product컴포넌트와 공통 레이아웃 입니다. */}
+            <div>
+                <ProductInfo data={data} />
             </div>
-            <div className="productsList row">
-                <span className="num black">2</span>
-                <img src={ImgLoad(data.img)} />
-                <div>
-                    <ProductInfo data={data} />
-                </div>
-                <div className="iconBox">
-                    <FontAwesomeIcon className="icon" icon={faHeart} size="2x" />
-                </div>
+            <div className="iconBox">
+                <FontAwesomeIcon className="icon" icon={faHeart} size="2x" />
             </div>
         </div>
     )

@@ -119,9 +119,13 @@ function MainPage() {
                         <A>더 많은 상품보기</A>
                     </p>
                     {/* 가로용 상품 컴포넌트 사용 예시 */}
-                    <ProductRow data={ProductData[0]} />
-                    <ProductRow data={ProductData[0]} />
-                    <ProductRow data={ProductData[0]} />
+                    <div className="productRowflexWrap">
+                        <ProductRow data={ProductData[0]} />
+                        <ProductRow data={ProductData[0]} />
+                        <ProductRow data={ProductData[0]} />
+                        <ProductRow data={ProductData[0]} />
+                        <ProductRow data={ProductData[0]} />
+                    </div>
                 </section>
 
                 <section className="tiptoc divisionSpace">
