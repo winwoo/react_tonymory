@@ -117,7 +117,7 @@ function Num({ num }) {
         return <span className="num orange"> {num} </span>;
     } else {
         // 그 외 레이아웃
-        return <span className="num orange"> {num} </span>;
+        return <span className="num black"> {num} </span>;
     }
 }
 

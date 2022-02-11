@@ -108,7 +108,6 @@ function MainPage() {
                                 </div>
                             </A>
                         </div>
-
                         <div className="slideCon">
                             <A>
                                 <img src={CommonImg.realReview01} />
@@ -125,7 +124,6 @@ function MainPage() {
                                 </div>
                             </A>
                         </div>
-
                         <div className="slideCon">
                             <A>
                                 <img src={CommonImg.realReview02} />
@@ -141,12 +139,7 @@ function MainPage() {
                                 </div>
                             </A>
                         </div>
-
                     </div>
-                    
-                    
-                    
-                    
                 </section>
                 
                 <section className="newItem divisionSpace">

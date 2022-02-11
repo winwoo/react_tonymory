@@ -5,6 +5,7 @@ import "./css/mainPage.css";
 
 import MainPage from './component/MainPage';
 import LoginPage from './component/LoginPage';
+import ReviewModal from './component/ReviewModal';
 
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { A } from "./component/util/Common";
@@ -80,6 +81,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<MainPage />} />
                 <Route path="/Login" element={<LoginPage />} />
+                <Route path="/ReviewModal" element={<ReviewModal />} />
             </Routes>
         </div>
     );
