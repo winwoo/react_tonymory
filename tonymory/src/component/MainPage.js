@@ -62,14 +62,17 @@ function MainPage() {
 
                 <section className="tiptoc divisionSpace">
                     <p className="cl_headLineName">같이 볼래요? 꿀잼 토니팁톡
-                        <A>더 많은 상품보기</A>
+                        <A>더 많은 콘텐츠보기</A>
                     </p>
                     <div className="tiptocCon">
                         <div className="tiptocInner">
                             <A><img src={CommonImg.tiptoc00} /></A>
                             <div className="infor">
-                                <div>지친 피부엔? 퀵 카밍 노하우</div>
-                                <div>장기간 마스크 생활로 울긋불긋 자극 받은 내 피부. 지친 피부를 구원해 줄 듀오가 떴다!</div>
+
+                                <A>
+                                    <span>지친 피부엔? 퀵 카밍 노하우</span>
+                                    <span>장기간 마스크 생활로 울긋불긋 자극 받은 내 피부. 지친 피부를 구원해 줄 듀오가 떴다!</span>
+                                </A>
                                 <div className="hashtag">
                                     <A>#어성초시카</A>
                                     <A>#어성초토너</A>
@@ -82,21 +85,97 @@ function MainPage() {
                         </div>
                     </div>
                 </section>
-                <section className="bestContainer divisionSpace">
+                <section className="realReview divisionSpace">
                     <p className="cl_headLineName">직접 써보고 작성한 찐 리뷰
-                        <A>더 많은 상품보기</A>
+                        <A>더 많은 리뷰보기</A>
                     </p>
+                    <div className="reviewSlider">
+                        <div className="slideCon">
+                            <A>
+                                <img src={CommonImg.realReview00} />
+                                <div className="mainTxt">애교빔 3종 세트(+스핀오프 팔레트 증정!!)</div>
+                                <div className="elip">참새가 방앗간을 그냥 지나치지 못하듯 까마귀인 저도 글리터를 그냥 지나치지 못했어요... 마스크 때문에 눈화장에 신경을 많이 쓰고 있고 특히 애교살에 힘을 많이 주는 편이라
+                                    애교빔 3종 세트라고 해서 바로 구매했습니다 ㅋㅋ 애교빔 제품들도 다 마음에 들고 삐삐체리 팔레트도
+                                    예뻐서 글리터쪽에 같이 리뷰 써요! 애교빔 글링 글리터 3호 핑크빔은 말그대로 체리처럼 상큼한 핑크빔이 매력적인 리퀴드 글리터입니다.
+                                </div>
+                                <div className="reviewBottom">
+                                    {/* 베스트 경우 class명: orange로 색상만 넣어줌*/}
+                                    <span className="orange">베스트</span>
+                                    <div className="reviewUserPakage">
+                                        <span className="userName">사용자1</span>
+                                        <span className="date">2022.02.09</span>
+                                    </div>
+                                </div>
+                            </A>
+                        </div>
 
+                        <div className="slideCon">
+                            <A>
+                                <img src={CommonImg.realReview01} />
+                                <div className="mainTxt">플로리아 뉴트라 에너지 100시간 크림 50ml</div>
+                                <div className="elip">사용감이랑 보습유지를 동시에 잡은 흔치 않은 크림이었어요. 제형이 상당히 독특한데요. 펌핑하면 꾸덕한 느낌으로 나오는데 문지르면 묽은 크림처럼 부드럽게 퍼져요. 흡수력도 좋아서 문질문질하면 금새 피부에 스며들고요. 다만 속건조까지 잡아주는 타입은 아니니 세럼 등 속보습은 따로 충분히 해야 해요. 오일 보습막이 만들어진듯한 느낌으로 마무리되고, 그만큼 촉촉함도 오래 지속됐어요. 광택도 꽤 많이 올라오고요.
+                                </div>
+                                <div className="reviewBottom">
+                                    {/* 베스트아닐 경우 class명: basic  */}
+                                    <span className="basic">실시간</span>
+                                    <div className="reviewUserPakage">
+                                        <span className="userName">사용자1</span>
+                                        <span className="date">2022.02.09</span>
+                                    </div>
+                                </div>
+                            </A>
+                        </div>
+
+                        <div className="slideCon">
+                            <A>
+                                <img src={CommonImg.realReview02} />
+                                <div className="mainTxt">프롬 해남 까만 보리 미스트 토너 리필</div>
+                                <div className="elip">겨울이라 난방때문에 어쩔수없이 건조해서 구매햇어요 리필형이라 환경에 도움도 되고 작은 스프레이통에 소분해서 여러개로 담아서 여기저기 놓고 자주 사용하면 소지하기도 좋고 건조하지 않고 촉촉해서 좋아요.굿 화장위에해도 잘유지되어 굿굿 써보고싶었던 제품인데 저렴하게 구입해서 굿굿굿
+                                </div>
+                                <div className="reviewBottom">
+                                    <span className="basic">신상</span>
+                                    <div className="reviewUserPakage">
+                                        <span className="userName">사용자1</span>
+                                        <span className="date">2022.02.09</span>
+                                    </div>
+                                </div>
+                            </A>
+                        </div>
+
+                    </div>
+                    
+                    
+                    
+                    
                 </section>
-                <section className="bestContainer divisionSpace">
+                
+                <section className="newItem divisionSpace">
                     <p className="cl_headLineName">눈이 번쩍! 신상이 도착했어요
                         <A>더 많은 상품보기</A>
                     </p>
-
+                    <ul className="productsContainer">
+                        <RecommandProductElem />
+                    </ul>
                 </section>
-                <section className="bestContainer">
+                
+                <section className="lineUp">
                     <p className="cl_headLineName">한 눈에 보는 추천 라인</p>
+                    <div className="lineUpContainer">
+                        <A>플로리아 뉴트라</A>
+                        <A>타워베리어</A>
+                        <A>아토아미노</A>
+                        <A>더 블랙티</A>
+                        <A>에이지 플로리아</A>
+                        <A>내추럴스 산양유</A>
+                    </div>
+                    
+                    <div className="sliderContainer">
+                        <A><img src={CommonImg.floria00}/></A>
+                        <div className="test">
+                            slider 
 
+                        </div>
+                    </div>
                 </section>
                 {/*End::contentWrap*/}
             </div>

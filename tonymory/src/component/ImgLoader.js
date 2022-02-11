@@ -47,7 +47,15 @@ const CommonImg = {
     tiptoc00 : ImgLoad("tiptocImg00.jpg"),
     tiptoc01 : ImgLoad("tiptocImg01.jpg"),
     tiptoc02 : ImgLoad("tiptocImg02.jpg"),
-
+    //찐리뷰 이미지
+    realReview00 : ImgLoad("realReview00.jpg"), //애교빔
+    realReview01 : ImgLoad("realReview01.jpg"), //플로리아 뉴트라 에너지
+    realReview02 : ImgLoad("realReview02.jpg"), //까만 보리
+    //한눈에 보는 추천라인
+    floria00 : ImgLoad("floria00.jpg"), //대문이미지
+    floria01 : ImgLoad("floria01.jpg"), //에너지2종세트
+    floria02 : ImgLoad("floria02.jpg"), //100시간 크림
+    floria03 : ImgLoad("floria03.jpg"), //에멀전
 };
 
 
