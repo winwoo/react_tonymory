@@ -255,16 +255,16 @@ footer address .snsBox a:last-child {margin-right: 0;}
 /* =========================================== */
 /* 찐리뷰 클릭시 :: ReviewModal.js */
 /* ========================================== */
-.modal {}
 .modalBg {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.5);}
-.modalBg .modalContainer {overflow: hidden; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); max-width: 560px; height: 800px;
+.modalBg .modalContainer {overflow: hidden; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); max-width: 580px; height: 800px;
     padding: 30px 20px; box-sizing: border-box; background-color: #fff;}
 .modalBg .modalContainer .reviewTop {display: flex; align-items: center; justify-content: space-between;
     border-bottom: 1px solid #000; padding-bottom: 10px; margin-bottom: 20px; font-size: 21px; font-family:'NotoSansKRB';}
 .modalBg .modalContainer .reviewTop > .closeBtn {cursor: pointer;}
 
-.modalContainer .reviewDetailCon {overflow-y: scroll; height: 100%; }
+.modalContainer .detailWrap {max-height: calc(100vh - 231px); overflow: hidden; overflow-y: auto;}
 .modalContainer .imgslideBox {position: relative;}
+.modalContainer .imgslideBox img {width: 100%;}
 
 .modalContainer .imgslideBox .counting {position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); display: inline-block; height: 20px; padding: 0 10px; border-radius: 12px; font-size:  12px;
     color: #fff; font-family:'NotoSansKRB'; box-sizing: border-box; background-color: rgba(0, 0, 0, .5);}
@@ -273,24 +273,31 @@ footer address .snsBox a:last-child {margin-right: 0;}
 .modalContainer .imgslideBox .counting span:last-child::after {content: ''; padding: 0;}
 
 .reviewWrapper {padding: 0 15px; box-sizing: border-box;}
-.reviewUserPakage {display: flex; flex-direction: column;margin-bottom: 28px; }
-.reviewUserPakage .title {display: flex;}
-.reviewUserPakage .title .userName {font-size: 19px; color: #202122;}
-.reviewUserPakage .title .userName::after {content: ''; display: inline-block; width: 1px; height: 15px; margin: 0 8px; box-sizing: border-box; background-color: #D8D8D8;}
-.reviewUserPakage .title .score {}
-.reviewUserPakage .title .score .star {color: #FC5443; font-size: 11px;}
-.reviewUserPakage .title .date {margin-left: auto; color: #767778;}
+.reviewWrapper .reviewUserPakage {display: flex; flex-direction: column;margin-bottom: 28px; }
+.reviewWrapper .reviewUserPakage .title {display: flex;}
+.reviewWrapper .reviewUserPakage .title .userName {font-size: 19px; color: #202122;}
+.reviewWrapper .reviewUserPakage .title .userName::after {content: ''; display: inline-block; width: 1px; height: 15px; margin: 0 8px; box-sizing: border-box; background-color: #D8D8D8;}
+.reviewWrapper .reviewUserPakage .title .score {}
+.reviewWrapper .reviewUserPakage .title .score .star {color: #FC5443; font-size: 11px;}
+.reviewWrapper .reviewUserPakage .title .date {margin-left: auto; color: #767778;}
 
-.skinTypeBox span {color: #777; margin-right: 4px; font-size: 15px;}
-.skinTypeBox span:last-child {margin-right: 0;}
+.reviewWrapper .skinTypeBox span {color: #777; margin-right: 4px; font-size: 15px;}
+.reviewWrapper .skinTypeBox span:last-child {margin-right: 0;}
 
-.productsName {margin-bottom: 16px;}
-.productsName span:first-child {padding: 0 5px; margin-right: 5px; color: #fff; font-size: 14px; font-family:'NotoSansKRDL';}
-.productsName span:last-child {color: #777;}
+.reviewWrapper .productsName {margin-bottom: 16px;}
+.reviewWrapper .productsName span:first-child {padding: 0 5px; margin-right: 5px; color: #fff; font-size: 14px; font-family:'NotoSansKRDL';}
+.reviewWrapper .productsName span:last-child {color: #777;}
 
-.userReview {font-size: 17px;}
+.reviewWrapper .userReview {font-size: 17px; line-height: 1.7; letter-spacing: -0.18px;}
 
-/* =========================================== */
+.reviewWrapper .directProduct {display: flex; align-items: center; margin: 22px; padding: 18px; border: 1px solid #d3d3d3; border-radius: 5px; box-sizing: border-box;}
+.reviewWrapper .directProduct > img { width: 80px; margin-right: 10px;}
+.reviewWrapper .directProduct .tonymoly {width: 100%; margin-bottom: 8px; color: #111; letter-spacing: -0.18px; font-size: 17px; font-family:'NotoSansKRB';}
+.reviewWrapper .directProduct .tonymoly .productsName {font-size: 12px; letter-spacing: -0.18px; font-family:'NotoSansKRDL';}
+.reviewWrapper .directProduct .tonymoly .price {font-size: 14px;}
+
+
+    /* =========================================== */
 /* 신상도착 */
 /* =========================================== */
 .newItem .productsContainer {}

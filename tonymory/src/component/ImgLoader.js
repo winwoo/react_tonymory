@@ -49,6 +49,7 @@ const CommonImg = {
     tiptoc02 : ImgLoad("tiptocImg02.jpg"),
     //찐리뷰 이미지
     realReview00 : ImgLoad("realReview00.jpg"), //애교빔
+    reviewInnerImg00 : ImgLoad("reviewInnerImg00.jpg"), //애교빔 클릭시 상세이미지 애교빔 3종세트
     realReview01 : ImgLoad("realReview01.jpg"), //플로리아 뉴트라 에너지
     realReview02 : ImgLoad("realReview02.jpg"), //까만 보리
     //한눈에 보는 추천라인
