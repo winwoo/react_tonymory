@@ -14,7 +14,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 //폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import { React, useEffect, useRef, useState } from "react";
@@ -238,8 +238,14 @@ function MainPage() {
                         </address>
                     </div>
                 </div>
-
             </footer>
+            <div className="cl_fixedArea">
+                <A className="chat">
+                    <img src={CommonImg.chat} />
+                    <span>1</span>
+                </A>
+                <A><img src={CommonImg.top} /></A>
+            </div>
             {/*End::Wrap*/}
         </div>
     );

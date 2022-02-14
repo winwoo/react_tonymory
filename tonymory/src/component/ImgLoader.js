@@ -15,6 +15,10 @@ export const ImgArrayLoad = (imgNameFormat, extention, startIndex, length) => {
 
 const CommonImg = {
     // import 이미지 변수명 from getImg(이미지 파일명);
+    //상담톡이미지
+    chat : ImgLoad("btn_pc_chat.png"),
+    //top이미지
+    top : ImgLoad("btn_pc_top.png"),
     tonyLogo: ImgLoad("tonyLogo.png"),
     iconSearch: ImgLoad("icon_search.png"),
     iconUser: ImgLoad("icon_user.png"),

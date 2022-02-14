@@ -17,4 +17,11 @@
 /* 컨텐츠간 여백 */
 .divisionSpace {margin-bottom: 90px;}
 
-/* 모달내부 상단 */
+/* top버튼 */
+.cl_fixedArea {position: fixed; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 58px; height: auto; bottom: 20px; right: 45px;}
+.cl_fixedArea a {display: block; width: inherit;}
+.cl_fixedArea a img {width: inherit;}
+
+.cl_fixedArea .chat {position: relative;}
+.cl_fixedArea .chat > span {position: absolute; right: 0; top: 0; width: 20px; height: 20px; line-height: 20px; border-radius: 100%;
+    font-size: 12px; background-color: #E94E58; color: #fff; text-align: center;}
