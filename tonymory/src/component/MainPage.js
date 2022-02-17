@@ -19,8 +19,9 @@ import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import { React, useEffect, useRef, useState } from "react";
 
-import { KeywordData, MainVisualData, ProductData } from "../data/data";
+import { KeywordData, MainVisualData, ProductData, RealReviewData, ReviewType, TonyTiptocData } from "../data/data";
 import Product, { ProductRow } from "./Product";
+import ProductSlickSlider from "./ProductSlickSlider";
 
 
 
@@ -43,7 +44,7 @@ function MainPage() {
                     <p className="cl_headLineName">추천상품</p>
                     {/* <RecommandProductElem /> */}
                     <ul className="productsContainer">
-                        <RecommandProductElem />
+                        <ProductList datas={ProductData} viewCount={4} isDimmedCon={true} />
                     </ul>
                 </section>
 
@@ -64,32 +65,28 @@ function MainPage() {
                     <p className="cl_headLineName">같이 볼래요? 꿀잼 토니팁톡
                         <A>더 많은 콘텐츠보기</A>
                     </p>
-                    <div className="tiptocCon">
-                        <div className="tiptocInner">
-                            <A><img src={CommonImg.tiptoc00} /></A>
-                            <div className="infor">
-
-                                <A>
-                                    <span>지친 피부엔? 퀵 카밍 노하우</span>
-                                    <span>장기간 마스크 생활로 울긋불긋 자극 받은 내 피부. 지친 피부를 구원해 줄 듀오가 떴다!</span>
-                                </A>
-                                <div className="hashtag">
-                                    <A>#어성초시카</A>
-                                    <A>#어성초토너</A>
-                                    <A>#어성초패드</A>
-                                    <A>#손상흡토</A>
-                                    <A>#수분진정</A>
-                                    <A>#각질케어</A>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <ProductSlickSlider viewCount={1}>
+                        {
+                            TonyTiptocData.map((data, i) => {
+                                return <TonyTipToc key={i} data={data} />
+                            })
+                        }
+                    </ProductSlickSlider>
                 </section>
                 <section className="realReview divisionSpace">
                     <p className="cl_headLineName">직접 써보고 작성한 찐 리뷰
                         <A>더 많은 리뷰보기</A>
                     </p>
-                    <div className="reviewSlider">
+
+                    <ProductSlickSlider viewCount={3}>
+                        {
+                            RealReviewData.map((data, i) => {
+                                return <RealReview key={i} data={data} />;
+                            })
+                        }
+                    </ProductSlickSlider>
+                    {/* <div className="reviewSlider">
+
                         <div className="slideCon">
                             <A>
                                 <img src={CommonImg.realReview00} />
@@ -99,7 +96,6 @@ function MainPage() {
                                     예뻐서 글리터쪽에 같이 리뷰 써요! 애교빔 글링 글리터 3호 핑크빔은 말그대로 체리처럼 상큼한 핑크빔이 매력적인 리퀴드 글리터입니다.
                                 </div>
                                 <div className="reviewBottom">
-                                    {/* 베스트 경우 class명: orange로 색상만 넣어줌*/}
                                     <span className="orange">베스트</span>
                                     <div className="reviewUserPakage">
                                         <span className="userName">사용자1</span>
@@ -115,7 +111,6 @@ function MainPage() {
                                 <div className="elip">사용감이랑 보습유지를 동시에 잡은 흔치 않은 크림이었어요. 제형이 상당히 독특한데요. 펌핑하면 꾸덕한 느낌으로 나오는데 문지르면 묽은 크림처럼 부드럽게 퍼져요. 흡수력도 좋아서 문질문질하면 금새 피부에 스며들고요. 다만 속건조까지 잡아주는 타입은 아니니 세럼 등 속보습은 따로 충분히 해야 해요. 오일 보습막이 만들어진듯한 느낌으로 마무리되고, 그만큼 촉촉함도 오래 지속됐어요. 광택도 꽤 많이 올라오고요.
                                 </div>
                                 <div className="reviewBottom">
-                                    {/* 베스트아닐 경우 class명: basic  */}
                                     <span className="basic">실시간</span>
                                     <div className="reviewUserPakage">
                                         <span className="userName">사용자1</span>
@@ -139,18 +134,18 @@ function MainPage() {
                                 </div>
                             </A>
                         </div>
-                    </div>
+                    </div> */}
                 </section>
-                
+
                 <section className="newItem divisionSpace">
                     <p className="cl_headLineName">눈이 번쩍! 신상이 도착했어요
                         <A>더 많은 상품보기</A>
                     </p>
                     <ul className="productsContainer">
-                        <RecommandProductElem />
+                        <ProductList datas={ProductData} viewCount={4} isDimmedCon={false} />
                     </ul>
                 </section>
-                
+
                 <section className="lineUp">
                     <p className="cl_headLineName">한 눈에 보는 추천 라인</p>
                     <div className="lineUpContainer">
@@ -161,14 +156,17 @@ function MainPage() {
                         <A>에이지 플로리아</A>
                         <A>내추럴스 산양유</A>
                     </div>
-                    
-                    <div className="sliderContainer">
-                        <A><img src={CommonImg.floria00}/></A>
-                        <div className="test">
-                            slider 
 
-                        </div>
+                    <div className="sliderContainer">
+                        <A><img src={CommonImg.floria00} /></A>
+                        <ul className="productsContainer">
+                            <ProductList datas={ProductData} viewCount={3} isDimmedCon={false} />
+                        </ul>
+                        {/* <div className="test">
+
+                        </div> */}
                     </div>
+
                 </section>
                 {/*End::contentWrap*/}
             </div>
@@ -330,67 +328,28 @@ function KeyWordElem() {
     return KeywordArr;
 }
 
-function RecommandProductElem() {
-    const recommandProductArr = [];
-    const recommandViewCount = 4;
-    const emptyCount = ProductData.length % 4;
-
+function ProductList({ datas, viewCount, isDimmedCon }) {
+    const productArr = [];
+    const emptyCount = datas.length % viewCount;
     // 실제 상품 셋팅
-    for (let i = 0; i < ProductData.length; ++i) {
-        const data = ProductData[i];
+    for (let i = 0; i < datas.length; ++i) {
+        const data = datas[i];
 
         if (!data.isRecommand)
             continue;
 
-        recommandProductArr.push(<Product key={i} data={data} />);
+        productArr.push(<Product key={i} data={data} isDimmedCon={isDimmedCon} />);
     }
 
     // 4개씩 보여지기 위해 빈 상품으로 채워줌
     for (let i = 0; i < emptyCount; ++i) {
-        recommandProductArr.push(<Product key={i} data={null} />);
-    }
-
-    const settings = {
-        dots: true,
-        arrows: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: recommandViewCount,
-        slidesToScroll: recommandViewCount,
-        dotsClass: "slick-dots-custom",
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
-    };
-
-    function SampleNextArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-            <div
-                className={className}
-                style={{ ...style, display: "block", background: "red" }}
-                onClick={onClick}
-            />
-        );
-    }
-
-    function SamplePrevArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-            <div
-                className={className}
-                style={{ ...style, display: "block", background: "green" }}
-                onClick={onClick}
-            />
-        );
+        productArr.push(<Product key={i} data={null} isDimmedCon={isDimmedCon} />);
     }
 
     return (
-        <>
-            <Slider {...settings}>
-                {recommandProductArr}
-            </Slider>
-            {/* {recommandProductArr} */}
-        </>
+        <ProductSlickSlider viewCount={viewCount}>
+            {productArr}
+        </ProductSlickSlider>
     );
 }
 
@@ -409,6 +368,63 @@ function Top6ProductElem() {
     return (
         <div className="productRowflexWrap">
             {products}
+        </div>
+    );
+}
+
+function TonyTipTocList() {
+    return (
+        <ProductSlickSlider viewCount={1}>
+            {
+                TonyTiptocData.map((data, i) => {
+                    return <TonyTipToc key={i} data={data} />
+                })
+            }
+        </ProductSlickSlider>
+    );
+}
+
+function TonyTipToc({ data }) {
+    return (
+        <div className="tiptocCon">
+            <div className="tiptocInner">
+                <A><img src={ImgLoad(data.img)} /></A>
+                <div className="infor">
+
+                    <A>
+                        <span>{data.title}</span>
+                        <span>{data.description}</span>
+                    </A>
+                    <div className="hashtag">
+                        {
+                            data.tags.map((tag, i) => {
+                                return <A key={i}>{tag}</A>;
+                            })
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function RealReview({ data }) {
+    const typeClass = data.type === ReviewType.BEST ? "orange" : "basic";
+    return (
+        <div className="slideCon">
+            <A>
+                <img src={ImgLoad(data.img)} />
+                <div className="mainTxt">{data.title}</div>
+                <div className="elip">{data.review}</div>
+                <div className="reviewBottom">
+                    {/* 베스트 경우 class명: orange로 색상만 넣어줌*/}
+                    <span className={typeClass}>{data.type}</span>
+                    <div className="reviewUserPakage">
+                        <span className="userName">{data.userName}</span>
+                        <span className="date">{data.date}</span>
+                    </div>
+                </div>
+            </A>
         </div>
     );
 }

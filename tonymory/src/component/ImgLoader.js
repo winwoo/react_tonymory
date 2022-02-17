@@ -47,10 +47,6 @@ const CommonImg = {
     //이벤트 이미지
     eventImg00: ImgLoad("evt00.jpg"),
     eventImg01: ImgLoad("evt01.jpg"),
-    //토니팁톡 이미지
-    tiptoc00 : ImgLoad("tiptocImg00.jpg"),
-    tiptoc01 : ImgLoad("tiptocImg01.jpg"),
-    tiptoc02 : ImgLoad("tiptocImg02.jpg"),
     //찐리뷰 이미지
     realReview00 : ImgLoad("realReview00.jpg"), //애교빔
     reviewInnerImg00 : ImgLoad("reviewInnerImg00.jpg"), //애교빔 클릭시 상세이미지 애교빔 3종세트

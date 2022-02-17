@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBag, faCreditCard } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 
-function Product({ data }) {
+function Product({ data, isDimmedCon }) {
     if (!data)
         return null;
 
@@ -18,17 +18,7 @@ function Product({ data }) {
         <div className="productsList">
             <img src={ImgLoad(data.img)} />
             <div className="dimmerBg">
-                <div className="dimmedCon">
-                    <A>
-                        <span className="circle"> <FontAwesomeIcon icon={faShoppingBag} size="2x" /></span>
-                    </A>
-                    <A>
-                        <span className="circle"><FontAwesomeIcon icon={faHeart} size="2x" /></span>
-                    </A>
-                    <A>
-                        <span className="circle"><FontAwesomeIcon icon={faCreditCard} size="2x" /></span>
-                    </A>
-                </div>
+                {isDimmedCon && <DimmedCon />}
             </div>
             {/* 상품 레이아웃 공통 부분 */}
             <ProductInfo data={data} />
@@ -47,21 +37,40 @@ export function ProductRow({ data }) {
                 <FontAwesomeIcon className="icon" icon={faHeart} size="2x" />
             </div>
         </div>
-    )
+    );
+}
+
+function DimmedCon() {
+    return (
+        <div className="dimmedCon">
+            <A>
+                <span className="circle"> <FontAwesomeIcon icon={faShoppingBag} size="2x" /></span>
+            </A>
+            <A>
+                <span className="circle"><FontAwesomeIcon icon={faHeart} size="2x" /></span>
+            </A>
+            <A>
+                <span className="circle"><FontAwesomeIcon icon={faCreditCard} size="2x" /></span>
+            </A>
+        </div>
+    );
 }
 
 function ProductInfo({ data }) {
     return (
         <div>
-            <Banefit banefit={data.benefits} />
+            {data.benefits && <Banefit banefit={data.benefits} />}
             <div className="tonymoly">{data.category}</div>
             <div className="productsName">{data.productName}</div>
             <Price data={data} />
             <TagList tags={data.tags} />
-            <div className="grade">
-                <span className="score">★ {data.reviewScore}</span>
-                <span className="review">리뷰 {data.reviewCount}</span>
-            </div>
+            {
+                (data.reviewScore > 0 && data.reviewCount > 0) &&
+                <div className="grade">
+                    <span className="score">★ {data.reviewScore}</span>
+                    <span className="review">리뷰 {data.reviewCount}</span>
+                </div>
+            }
         </div>
     );
 }
