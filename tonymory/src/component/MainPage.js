@@ -14,7 +14,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 //폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight, faChevronLeft ,faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import { React, useEffect, useRef, useState } from "react";
@@ -162,9 +162,6 @@ function MainPage() {
                         <ul className="productsContainer">
                             <ProductList datas={ProductData} viewCount={3} isDimmedCon={false} />
                         </ul>
-                        {/* <div className="test">
-
-                        </div> */}
                     </div>
 
                 </section>

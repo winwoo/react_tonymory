@@ -189,6 +189,9 @@ footer address .snsBox a:last-child {margin-right: 0;}
 .productsList .dimmerBg .dimmedCon a:nth-child(3) {color: #fff; background-color: #fc5443;}
 .productsList .dimmerBg .dimmedCon a .circle img {}
 
+.slick-dots-custom {align-items: center;}
+.slick-dots-custom .arrowIcon {color: #B4B4B4; font-size: 19px; padding: 0 5px; cursor: pointer;}
+.slick-prev, .slick-next {display: none !important;}
 /*.slick-arrow {top: 105% !important;}*/
 /*.slick-arrow.slick-prev {left: 42% !important; background: transparent !important;}*/
 /*.slick-arrow.slick-next {left: 56% !important; background: transparent !important;}*/
@@ -309,11 +312,14 @@ footer address .snsBox a:last-child {margin-right: 0;}
 .lineUpContainer > a:last-child {margin-right: 0;}
 .lineUpContainer > a:hover {transition: .3s; border-color: #fc5443; color: #fc5443;}
 
-/* .lineUp .sliderContainer {display: flex;} */
-.lineUp .sliderContainer > a {overflow: hidden; display: block; width: 250px; margin-right: 15px;}
-.lineUp .sliderContainer > a img {width: 100%;}
-.lineUp .sliderContainer > a img:hover {transition: .5s; transform: scale(1.03);}
-.lineUp .sliderContainer > a img:not(:hover) {transition: .5s; transform: scale(1);}
+
+.lineUp .sliderContainer {position: relative;}
+.lineUp .sliderContainer a {overflow: hidden; position: absolute; top: 0; left: 0;  margin-right: 15px;}
+.lineUp .sliderContainer a img {display: block; width: 250px;}
+.lineUp .sliderContainer a img:hover {transition: .5s; transform: scale(1.03);}
+.lineUp .sliderContainer a img:not(:hover) {transition: .5s; transform: scale(1);}
+.lineUp .sliderContainer .productsContainer {margin-left: auto; max-width: 940px;}
+
 
 /* =========================================== */
 /* index 로그인클릭 > 로그인창 :: LogInPage.js */

@@ -4,6 +4,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useRef } from "react";
 
+//폰트어썸
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight, faChevronLeft ,faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
+
+
 function ProductSlickSlider({viewCount, children}) {
     let sliderRef = useRef(null);
 
@@ -29,9 +35,9 @@ function ProductSlickSlider({viewCount, children}) {
         return (
             <>
                 <ul className="slick-dots-custom">
-                    <div onClick={onClickLeft}>L</div>
+                    <div onClick={onClickLeft}><FontAwesomeIcon className="arrowIcon" icon={faChevronLeft} /></div>
                     {dots}
-                    <div onClick={onClickRight}>R</div>
+                    <div onClick={onClickRight}><FontAwesomeIcon className="arrowIcon" icon={faChevronRight} /></div>
                 </ul>
             </>
         );

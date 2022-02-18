@@ -49,9 +49,16 @@ const CommonImg = {
     eventImg01: ImgLoad("evt01.jpg"),
     //찐리뷰 이미지
     realReview00 : ImgLoad("realReview00.jpg"), //애교빔
-    reviewInnerImg00 : ImgLoad("reviewInnerImg00.jpg"), //애교빔 클릭시 상세이미지 애교빔 3종세트
+    reviewInnerImg00_1 : ImgLoad("realReviewDetail00_1.jpg"), //애교빔 클릭시 상세이미지 애교빔 3종세트
+    reviewInnerImg00_2 : ImgLoad("realReviewDetail00_2.jpg"),
+    reviewInnerImg00_3 : ImgLoad("realReviewDetail00_3.jpg"),
+    reviewInnerImg00_4 : ImgLoad("realReviewDetail00_4.jpg"),
     realReview01 : ImgLoad("realReview01.jpg"), //플로리아 뉴트라 에너지
     realReview02 : ImgLoad("realReview02.jpg"), //까만 보리
+    realReview03 : ImgLoad("realReview03.jpg"), //더쇼킹스핀오프삐삐체리
+    reviewInnerImg03_1 : ImgLoad("realReviewDetail03_1.jpg"), //더쇼킹스핀오프삐삐체리_세부이미지
+    reviewInnerImg03_2 : ImgLoad("realReviewDetail03_2.jpg"), //더쇼킹스핀오프삐삐체리_세부이미지
+    reviewInnerImg03_3 : ImgLoad("realReviewDetail03_3.jpg"), //더쇼킹스핀오프삐삐체리_세부이미지
     //한눈에 보는 추천라인
     floria00 : ImgLoad("floria00.jpg"), //대문이미지
     floria01 : ImgLoad("floria01.jpg"), //에너지2종세트
